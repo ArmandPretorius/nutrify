@@ -7,6 +7,8 @@ C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\N
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify\obj\Debug\netstandard2.0\Nutrify.csproj.CoreCompileInputs.cache
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify\obj\Debug\netstandard2.0\Nutrify.AssemblyInfoInputs.cache
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify\obj\Debug\netstandard2.0\Nutrify.AssemblyInfo.cs
-C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify\obj\Debug\netstandard2.0\Nutrify.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify\obj\Debug\netstandard2.0\Nutrify.pdb
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify\obj\Debug\netstandard2.0\Pages\SearchPage.xaml.g.cs
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify\obj\Debug\netstandard2.0\Pages\NutrientsResultPage.xaml.g.cs
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify\obj\Debug\netstandard2.0\XamlC.stamp

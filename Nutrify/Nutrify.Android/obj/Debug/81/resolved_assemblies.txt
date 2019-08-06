@@ -3,11 +3,13 @@ C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\N
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\Java.Interop.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\Mono.Android.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\mscorlib.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\Newtonsoft.Json.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\Nutrify.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Core.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Numerics.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Numerics.Vectors.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Runtime.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Xml.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Xml.Linq.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\Xamarin.Android.Arch.Core.Common.dll
@@ -36,6 +38,7 @@ C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\N
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Net.Http.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Drawing.Common.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Runtime.Serialization.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.ServiceModel.Internals.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\netstandard.dll

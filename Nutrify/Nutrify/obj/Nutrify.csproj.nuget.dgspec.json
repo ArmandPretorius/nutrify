@@ -14,7 +14,7 @@
         "outputPath": "C:\\Users\\Armand Pretorius\\Desktop\\OWI_ThirdYear\\IDV 300\\Term 3\\Nutrify\\Nutrify\\Nutrify\\Nutrify\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
