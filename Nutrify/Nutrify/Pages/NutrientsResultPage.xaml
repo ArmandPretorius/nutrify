@@ -6,17 +6,13 @@
              mc:Ignorable="d"
              x:Class="Nutrify.Pages.NutrientsResultPage">
 
-    <ListView x:Name="NutrientsListView">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout>
-                        <Label Text="{Binding label}"></Label>
-                       
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <StackLayout>
+        <Label x:Name="foodName"></Label>
+        <Label x:Name="foodEnergy"></Label>
+        <Label x:Name="foodProtein"></Label>
+        <Label x:Name="foodFat"></Label>
+        <Label x:Name="foodCals"></Label>
+        <Label x:Name="foodFibre"></Label>
+    </StackLayout>
 
 </ContentPage>

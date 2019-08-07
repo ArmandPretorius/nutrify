@@ -10,7 +10,7 @@ namespace Nutrify
         {
             InitializeComponent();
 
-            MainPage = new Pages.NutrientsResultPage();
+            MainPage = new NavigationPage(new Pages.SearchPage());
         }
 
         protected override void OnStart()

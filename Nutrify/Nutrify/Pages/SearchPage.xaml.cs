@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace Nutrify.Pages
 {
@@ -15,8 +16,12 @@ namespace Nutrify.Pages
         public SearchPage()
         {
             InitializeComponent();
-            
         }
 
+        public async void SearchFood(object sender, System.EventArgs e)
+        {
+            var result = searchInput.Text;
+            await Navigation.PushAsync(new NutrientsResultPage(result));
+        }
     }
 }
