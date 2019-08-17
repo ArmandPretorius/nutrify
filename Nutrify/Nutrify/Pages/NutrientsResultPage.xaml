@@ -4,15 +4,27 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Nutrify.Pages.NutrientsResultPage">
+             x:Class="Nutrify.Pages.NutrientsResultPage"
+             BackgroundColor="#F2F2F2"
+             NavigationPage.HasNavigationBar="False"
+             Padding="0">
+    
+    
+    <StackLayout Padding="20">
 
-    <StackLayout>
-        <Label x:Name="foodName"></Label>
-        <Label x:Name="foodEnergy"></Label>
-        <Label x:Name="foodProtein"></Label>
-        <Label x:Name="foodFat"></Label>
-        <Label x:Name="foodCals"></Label>
-        <Label x:Name="foodFibre"></Label>
+
+
+        <Label x:Name="foodName" FontSize="Large"></Label>
+        <Label Text="Energy: " FontSize="Small"></Label>
+        <Label x:Name="foodEnergy" FontSize="Medium"></Label>
+        <Label Text="Protein: " FontSize="Small"></Label>
+        <Label x:Name="foodProtein" FontSize="Medium"></Label>
+        <Label Text="Fat: " FontSize="Small"></Label>
+        <Label x:Name="foodFat"  FontSize="Medium"></Label>
+        <Label Text="Calories: " FontSize="Small"></Label>
+        <Label x:Name="foodCals"  FontSize="Medium"></Label>
+        <Label Text="Fibres: " FontSize="Small"></Label>
+        <Label x:Name="foodFibre"  FontSize="Medium"></Label>
     </StackLayout>
 
 </ContentPage>

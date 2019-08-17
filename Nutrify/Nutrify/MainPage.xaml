@@ -2,13 +2,80 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Nutrify"
-             x:Class="Nutrify.MainPage">
+             x:Class="Nutrify.MainPage"
+             BackgroundColor="#F2F2F2">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout Padding="0">
+
+        <Grid RowSpacing="0" ColumnSpacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Aqua">
+            <Label>IMAGE</Label>
+        </StackLayout>
+
+
+        <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Frame  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" CornerRadius="15">
+                <Grid RowSpacing="0" ColumnSpacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="0" Padding="10">
+                        <Label FontSize="36">Title</Label>
+                    </StackLayout>
+
+                    <StackLayout  Grid.Row="1" Grid.Column="0" Padding="10,0,10,0">
+                        <Label Text="Top Left" FontSize="Large"  />
+                        <Label Text="Top Right"  />
+                    </StackLayout>
+
+                    <StackLayout  Grid.Row="1" Grid.Column="1" Padding="0,0,10,0">
+                        <Label Text="Top Right" FontSize="Large" />
+                        <Label Text="Top Right"  />
+                    </StackLayout>
+
+                    <StackLayout  Grid.Row="2" Grid.Column="0" Padding="10,0,10,0">
+                        <Label Text="Bottom Left" FontSize="Large"/>
+                        <Label Text="Top Right"  />
+                    </StackLayout>
+
+                    <StackLayout  Grid.Row="2" Grid.Column="1" Padding="0,0,10,0">
+                        <Label Text="Bottom Right" FontSize="Large" />
+                        <Label Text="Top Right"  />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3" Grid.Column="0" Padding="10,0,10,0">
+                        <Label Text="Text" FontSize="Large" />
+                        <Label Text="Top Right"  />
+                    </StackLayout>
+
+                    <StackLayout Grid.ColumnSpan="2" Grid.Row="4" Grid.Column="0" Padding="10">
+                        <Button Text="Find Recipes" BackgroundColor="#6FAC2B" CornerRadius="200" TextColor="#F2F2F2"></Button>
+                    </StackLayout>
+
+                </Grid>
+
+            </Frame>
+        </StackLayout>
     </StackLayout>
+    
+    
 
 </ContentPage>
