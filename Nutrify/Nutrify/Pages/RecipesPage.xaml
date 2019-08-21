@@ -8,39 +8,73 @@
              BackgroundColor="#F2F2F2">
 
     <StackLayout Padding="0">
-        <StackLayout HorizontalOptions="FillAndExpand" Padding="30">
-            <Button Text="Back" BackgroundColor="Transparent"></Button>
-            <Label Text="Loading..." FontSize="18"/>
+        <StackLayout HorizontalOptions="FillAndExpand" Padding="20,30,20,15">
+            <Label Text="back" Margin="0,0,0,10"></Label>
+            <Label Text="Loading..." FontSize="18" Margin="0,0,0,-10"/>
             <Label Text="Recipes" FontSize="36"/>
         </StackLayout>
-        <StackLayout>
+        <StackLayout Padding="20,0,20,20">
             <Label Text="Filter"></Label>
+
+            <Frame Padding="15" CornerRadius="15" Margin="0,0,0,0" BackgroundColor="White">
+                <Frame.Content>
+                    <Frame Padding="5,5,10,5" BackgroundColor="Transparent">
+                        <Frame.Content>
+                            <AbsoluteLayout HorizontalOptions="FillAndExpand">
+                                <Frame CornerRadius="15" Padding="0" IsClippedToBounds="True" >
+                                    <Image Aspect="AspectFill" Source="" WidthRequest="75" HeightRequest="75" BackgroundColor="Gray" Margin="0"></Image>
+                                </Frame>
+                                <StackLayout Orientation="Vertical" Margin="95,0,30,0">
+                                    <Label Text="Recipe Name" LineBreakMode="TailTruncation" FontSize="18"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Time"></Label>
+                                        <Label Text="Cal" Margin="40,0,0,0"></Label>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Image AbsoluteLayout.LayoutBounds="1, 0, 25, 25"
+                                       WidthRequest="25"
+                                       HeightRequest="25"
+                                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                                       Source="" Aspect="AspectFit"  BackgroundColor="blue"/>
+                            </AbsoluteLayout>
+                        </Frame.Content>
+
+                    </Frame>
+                </Frame.Content>
+            </Frame>
         </StackLayout>
 
-        <StackLayout Padding="30">
-            <ListView x:Name="recipeList" HasUnevenRows="True">
+        <StackLayout Padding="20,20,20,0">
+            <ListView x:Name="recipeList" HasUnevenRows="True" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-
-                            <Frame Padding="0,0,0,3" CornerRadius="15" Margin="0,0,0,20">
+                            <Frame Padding="15" CornerRadius="15" Margin="0,0,0,15" BackgroundColor="White">
                                 <Frame.Content>
-                                    <Frame Padding="15,15,15,15" BackgroundColor="White">
+                                    <Frame Padding="5,5,10,5" BackgroundColor="Transparent">
                                         <Frame.Content>
-                                            <StackLayout Padding="15"  Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                                <Label Text="{Binding name}"
-                           FontFamily="OpenSans-Light"
-                           FontSize="9"
-                           TextColor="#69add1"/>
-                                            </StackLayout>
-
+                                            <AbsoluteLayout HorizontalOptions="FillAndExpand">
+                                                <Frame CornerRadius="15" Padding="0" IsClippedToBounds="True" >
+                                                    <Image Aspect="AspectFill" Source="" WidthRequest="75" HeightRequest="75" BackgroundColor="Gray" Margin="0"></Image>
+                                                </Frame>
+                                                <StackLayout Orientation="Vertical" Margin="95,0,30,0">
+                                                    <Label Text="{Binding name}" LineBreakMode="TailTruncation" FontSize="18"/>
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label Text="Time"></Label>
+                                                        <Label Text="Cal" Margin="40,0,0,0"></Label>
+                                                    </StackLayout>
+                                                </StackLayout>
+                                                <Image AbsoluteLayout.LayoutBounds="1, 0, 25, 25"
+                                       WidthRequest="25"
+                                       HeightRequest="25"
+                                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                                       Source="" Aspect="AspectFit"  BackgroundColor="blue"/>
+                                            </AbsoluteLayout>
                                         </Frame.Content>
 
                                     </Frame>
                                 </Frame.Content>
-
                             </Frame>
-
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -49,4 +83,4 @@
         </StackLayout>
         
     </StackLayout>
-</ContentPage>
+</ContentPage> 
