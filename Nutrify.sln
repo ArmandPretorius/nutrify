@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrify.Android", "Nutrify\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrify.iOS", "Nutrify\Nutrify.iOS\Nutrify.iOS.csproj", "{07DFABEA-C2E4-4A0A-99C9-BD76CCE6DC3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nutrify", "Nutrify\Nutrify\Nutrify.csproj", "{38006C08-4D3D-487F-965A-6CD9D0B14A0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nutrify", "Nutrify\Nutrify\Nutrify.csproj", "{38006C08-4D3D-487F-965A-6CD9D0B14A0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
