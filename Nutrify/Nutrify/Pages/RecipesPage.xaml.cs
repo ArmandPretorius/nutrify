@@ -21,17 +21,17 @@ namespace Nutrify.Pages
         {
             InitializeComponent();
 
-         //   GetRecipes(search);
+               GetRecipes(search);
 
-            recipeList.ItemsSource = new List<Name>()
-           {new Name(){ name="This is Ist Message" },
-           new Name(){ name="This is Ist Message" },
-           new Name(){ name="This is Ist Message" },
-           new Name(){ name="This is Ist Message" },
-           new Name(){ name="This is Ist Message" },
-           new Name(){ name="This is Ist Message" },
-           new Name(){ name="This is Ist Message" },
-            new Name(){ name="This is 2nd Message"} };
+            //           recipeList.ItemsSource = new List<Name>()
+            //        {new Name(){ name="This is Ist Message" },
+            //      new Name(){ name="This is Ist Message" },
+            //    new Name(){ name="This is Ist Message" },
+            //           new Name(){ name="This is Ist Message" },
+            //         new Name(){ name="This is Ist Message" },
+            //       new Name(){ name="This is Ist Message" },
+            //     new Name(){ name="This is Ist Message" },
+            //    new Name(){ name="This is 2nd Message"} };
         }
 
         private async void GetRecipes(string food)
@@ -43,11 +43,26 @@ namespace Nutrify.Pages
             Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(response);
 
             var recipes = JsonConvert.DeserializeObject(response);
+
+            //  (string)jObject["parsed"][0]["food"]["label"];
+
+            foreach (object recipeitem in jObject["hints"])
+            {
+                Console.WriteLine("----------------------------- GETTING");
+                recipeList.ItemsSource = new List<Recipe>()
+                {
+                    new Recipe() { name = (string)jObject["hints"][recipeitem]["recipe"]["label"] }
+                }; 
+            }
+   
         }
     }
 }
 
-class Name
+class Recipe
 {
     public string name { get; set; }
+  //  public string time { get; set; }
+   // public string calories { get; set; }
+
 }

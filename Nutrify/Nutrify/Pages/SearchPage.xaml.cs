@@ -13,9 +13,15 @@ namespace Nutrify.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SearchPage : ContentPage
     {
+
         public SearchPage()
         {
             InitializeComponent();
+
+            searchInput.Completed += (sender, e) => {
+                var result = searchInput.Text;
+                Navigation.PushAsync(new NutrientsResultPage(result));
+            };
         }
 
         public async void SearchFood(object sender, System.EventArgs e)
@@ -23,5 +29,7 @@ namespace Nutrify.Pages
             var result = searchInput.Text;
             await Navigation.PushAsync(new NutrientsResultPage(result));
         }
+
+       
     }
 }

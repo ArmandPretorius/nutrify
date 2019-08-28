@@ -42,6 +42,18 @@
       "frameworks": {
         "monoandroid81": {
           "dependencies": {
+            "SQLite.Net.Async-PCL": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "SQLite.Net.Core-PCL": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Xam.Plugin.Connectivity": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
             "Xamarin.Android.Support.Core.Utils": {
               "target": "Package",
               "version": "[28.0.0.1, )"
@@ -130,6 +142,18 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.2, )"
+            },
+            "SQLite.Net.Async-PCL": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "SQLite.Net.Core-PCL": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Xam.Plugin.Connectivity": {
+              "target": "Package",
+              "version": "[3.2.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

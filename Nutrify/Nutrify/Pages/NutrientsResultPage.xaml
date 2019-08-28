@@ -12,75 +12,60 @@
 
     <StackLayout Padding="0">
 
-        <Grid RowSpacing="0" ColumnSpacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="0" Padding="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="3*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Frame  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid RowSpacing="0" ColumnSpacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
 
 
-            <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="20" Margin="0,0,0,-30">
-                <Label Text="Back" BackgroundColor="Transparent" Margin="0,0,0,15"></Label>
-                <Label>IMAGE</Label>
-            </StackLayout>
+                    <StackLayout Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="0" Padding="10">
+                        <ImageButton Source="backGreen" VerticalOptions="Start" HorizontalOptions="Start" Clicked="Back_Search_Clicked" Margin="0,-10,0,10" HeightRequest="30"/>
+                        <Label x:Name="foodName" FontSize="48" Text="Loading..." TextColor="#6FAC2B"></Label>
+                    </StackLayout>
 
+                    <StackLayout  Grid.Row="1" Grid.Column="0" Padding="10,20,10,0">
+                        <Label x:Name="foodEnergy" FontSize="36" Text="0" TextColor="#264830"></Label>
+                        <Label Text="Energy" FontSize="18" TextColor="#30604A"></Label>
+                    </StackLayout>
 
-            <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                <Frame  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" CornerRadius="15">
-                    <Grid RowSpacing="0" ColumnSpacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                        <Grid.RowDefinitions >
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
+                    <StackLayout  Grid.Row="1" Grid.Column="1" Padding="0,20,10,0">
+                        <Label x:Name="foodProtein" FontSize="36" Text="0" TextColor="#264830"></Label>
+                        <Label Text="Protein" FontSize="18" TextColor="#30604A"></Label>
+                    </StackLayout>
 
-                        <StackLayout Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="0" Padding="10">
-                            <Label x:Name="foodName" FontSize="36" Text="Loading..."></Label>
-                        </StackLayout>
+                    <StackLayout  Grid.Row="2" Grid.Column="0" Padding="10,20,10,0">
+                        <Label x:Name="foodFat"  FontSize="36" Text="0" TextColor="#264830"></Label>
+                        <Label Text="Fat" FontSize="18" TextColor="#30604A"></Label>
+                    </StackLayout>
 
-                        <StackLayout  Grid.Row="1" Grid.Column="0" Padding="10,0,10,0">
-                            <Label x:Name="foodEnergy" FontSize="Large" Text="0"></Label>
-                            <Label Text="Energy"></Label>
-                        </StackLayout>
+                    <StackLayout  Grid.Row="2" Grid.Column="1" Padding="0,20,10,0">
+                        <Label x:Name="foodCals"  FontSize="36" Text="0" TextColor="#264830"></Label>
+                        <Label Text="Calories" FontSize="18" TextColor="#30604A"></Label>
+                    </StackLayout>
 
-                        <StackLayout  Grid.Row="1" Grid.Column="1" Padding="0,0,10,0">
-                            <Label x:Name="foodProtein" FontSize="Large" Text="0"></Label>
-                            <Label Text="Protein"></Label>
-                        </StackLayout>
+                    <StackLayout Grid.Row="3" Grid.Column="0" Padding="10,20,10,0">
+                        <Label x:Name="foodFibre"  FontSize="36" Text="0" TextColor="#264830"></Label>
+                        <Label Text="Fibres" FontSize="18" TextColor="#30604A"></Label>
+                    </StackLayout>
 
-                        <StackLayout  Grid.Row="2" Grid.Column="0" Padding="10,0,10,0">
-                            <Label x:Name="foodFat"  FontSize="Large" Text="0"></Label>
-                            <Label Text="Fat"></Label>
-                        </StackLayout>
+                    <StackLayout Grid.ColumnSpan="2" Grid.Row="4" Grid.Column="0" Padding="10" Margin="0,20,0,20">
+                        <Button Text="find recipes" BackgroundColor="#6FAC2B" Padding="5" CornerRadius="200" TextColor="#F2F2F2" Clicked="Recipe_Search_Clicked" HeightRequest="56" FontSize="24" HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
 
-                        <StackLayout  Grid.Row="2" Grid.Column="1" Padding="0,0,10,0">
-                            <Label x:Name="foodCals"  FontSize="Large" Text="0"></Label>
-                            <Label Text="Calories"></Label>
-                        </StackLayout>
+                </Grid>
 
-                        <StackLayout Grid.Row="3" Grid.Column="0" Padding="10,0,10,0">
-                            <Label x:Name="foodFibre"  FontSize="Large" Text="0"></Label>
-                            <Label Text="Fibres"></Label>
-                        </StackLayout>
-
-                        <StackLayout Grid.ColumnSpan="2" Grid.Row="4" Grid.Column="0" Padding="10" Margin="0,40,0,0">
-                            <Button Text="Find Recipes" BackgroundColor="#6FAC2B" CornerRadius="200" TextColor="#F2F2F2" Clicked="Recipe_Search_Clicked" HeightRequest="56"></Button>
-                        </StackLayout>
-
-                    </Grid>
-
-                </Frame>
-            </StackLayout>
-        </Grid>
+            </Frame>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>

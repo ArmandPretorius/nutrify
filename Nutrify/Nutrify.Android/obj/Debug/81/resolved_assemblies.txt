@@ -5,6 +5,10 @@ C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\N
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\mscorlib.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\Newtonsoft.Json.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\Nutrify.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\Plugin.Connectivity.Abstractions.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\Plugin.Connectivity.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\SQLite.Net.Async.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\SQLite.Net.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Core.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Numerics.dll
@@ -48,4 +52,15 @@ C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\N
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.IO.Compression.FileSystem.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.ComponentModel.Composition.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Web.Services.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Threading.Tasks.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Threading.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Linq.Expressions.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Collections.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Linq.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Reflection.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Diagnostics.Debug.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Runtime.Extensions.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Reflection.Extensions.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Globalization.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\System.Text.Encoding.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\81\android\assets\Mono.Security.dll

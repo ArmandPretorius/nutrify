@@ -22,13 +22,13 @@ namespace Nutrify.Pages
         public NutrientsResultPage(string search)
         {
             result = search;
-            
-            InitializeComponent();
             GetNutrients(result);
+            InitializeComponent();
         }
 
             private async void GetNutrients(string food)
         {
+            Console.WriteLine("-------------------------------SEARCHING");
             client = new HttpClient();
 
             var response = await client.GetStringAsync("https://api.edamam.com/api/food-database/parser?ingr="+ food + "&app_id=" + foodAppId + "&app_key=" + foodAppKey);
@@ -44,15 +44,19 @@ namespace Nutrify.Pages
             foodFat.Text = (string)jObject["parsed"][0]["food"]["nutrients"]["FAT"];
             foodCals.Text = (string)jObject["parsed"][0]["food"]["nutrients"]["CHOCDF"];
             foodFibre.Text = (string)jObject["parsed"][0]["food"]["nutrients"]["FIBTG"];
-       
 
+            Console.WriteLine("-------------------------------GOT IT");
         }
 
         private void Recipe_Search_Clicked(object sender, EventArgs e)
         {
 
             Navigation.PushAsync(new RecipesPage(result));
+        }
 
+        private void Back_Search_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
         }
     }
 }
