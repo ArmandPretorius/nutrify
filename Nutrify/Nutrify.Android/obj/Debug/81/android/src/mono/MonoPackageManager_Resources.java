@@ -10,6 +10,8 @@ public class MonoPackageManager_Resources {
 		"Plugin.Connectivity.dll",
 		"SQLite.Net.Async.dll",
 		"SQLite.Net.dll",
+		"System.Net.Http.Extensions.dll",
+		"System.Net.Http.Primitives.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Runtime.dll",

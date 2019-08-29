@@ -5,43 +5,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Nutrify.Pages.RecipesPage"
+             NavigationPage.HasNavigationBar="False"
              BackgroundColor="#F2F2F2">
 
     <StackLayout Padding="0">
-        <StackLayout HorizontalOptions="FillAndExpand" Padding="20,30,20,15">
-            <Label Text="back" Margin="0,0,0,10"></Label>
-            <Label Text="Loading..." FontSize="18" Margin="0,0,0,-10"/>
-            <Label Text="Recipes" FontSize="36"/>
+        <StackLayout HorizontalOptions="FillAndExpand" Padding="10,30,20,15">
+            <ImageButton Source="backYellow" VerticalOptions="Start" HorizontalOptions="Start" Clicked="Back_Nutrients_Clicked" Margin="0,-10,0,10" HeightRequest="30"/>
+            <Label Text="Loading..." FontSize="18" Margin="0,0,0,-10" TextColor="#30604A"/>
+            <Label Text="Recipes" FontSize="36" TextColor="#F8AA08"/>
         </StackLayout>
         <StackLayout Padding="20,0,20,20">
-            <Label Text="Filter"></Label>
-
-            <Frame Padding="15" CornerRadius="15" Margin="0,0,0,0" BackgroundColor="White">
-                <Frame.Content>
-                    <Frame Padding="5,5,10,5" BackgroundColor="Transparent">
-                        <Frame.Content>
-                            <AbsoluteLayout HorizontalOptions="FillAndExpand">
-                                <Frame CornerRadius="15" Padding="0" IsClippedToBounds="True" >
-                                    <Image Aspect="AspectFill" Source="" WidthRequest="75" HeightRequest="75" BackgroundColor="Gray" Margin="0"></Image>
-                                </Frame>
-                                <StackLayout Orientation="Vertical" Margin="95,0,30,0">
-                                    <Label Text="Recipe Name" LineBreakMode="TailTruncation" FontSize="18"/>
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="Time"></Label>
-                                        <Label Text="Cal" Margin="40,0,0,0"></Label>
-                                    </StackLayout>
-                                </StackLayout>
-                                <Image AbsoluteLayout.LayoutBounds="1, 0, 25, 25"
-                                       WidthRequest="25"
-                                       HeightRequest="25"
-                                       AbsoluteLayout.LayoutFlags="PositionProportional"
-                                       Source="" Aspect="AspectFit"  BackgroundColor="blue"/>
-                            </AbsoluteLayout>
-                        </Frame.Content>
-
-                    </Frame>
-                </Frame.Content>
-            </Frame>
+            <!--<Label Text="Filter"></Label>-->
         </StackLayout>
 
         <StackLayout Padding="20,20,20,0">
@@ -58,17 +32,17 @@
                                                     <Image Aspect="AspectFill" Source="" WidthRequest="75" HeightRequest="75" BackgroundColor="Gray" Margin="0"></Image>
                                                 </Frame>
                                                 <StackLayout Orientation="Vertical" Margin="95,0,30,0">
-                                                    <Label Text="{Binding name}" LineBreakMode="TailTruncation" FontSize="18"/>
+                                                    <Label Text="{Binding title}" LineBreakMode="TailTruncation" FontSize="18" TextColor="#30604A"/>
                                                     <StackLayout Orientation="Horizontal">
-                                                        <Label Text="Time"></Label>
-                                                        <Label Text="Cal" Margin="40,0,0,0"></Label>
+                                                        <Label Text="Time" TextColor="#F8AA08"></Label>
+                                                        <Label Text="Cal" Margin="40,0,0,0" TextColor="#F8AA08"></Label>
                                                     </StackLayout>
                                                 </StackLayout>
-                                                <Image AbsoluteLayout.LayoutBounds="1, 0, 25, 25"
+                                                <!--<Image AbsoluteLayout.LayoutBounds="1, 0, 25, 25"
                                        WidthRequest="25"
                                        HeightRequest="25"
                                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                                       Source="" Aspect="AspectFit"  BackgroundColor="blue"/>
+                                       Source="" Aspect="AspectFit"  BackgroundColor="blue"/>-->
                                             </AbsoluteLayout>
                                         </Frame.Content>
 
