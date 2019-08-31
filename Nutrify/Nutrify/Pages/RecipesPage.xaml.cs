@@ -24,6 +24,7 @@ namespace Nutrify.Pages
 
             GetRecipes(search);
 
+            
             //           recipeList.ItemsSource = new List<Name>()
             //        {new Name(){ name="This is Ist Message" },
             //      new Name(){ name="This is Ist Message" },
@@ -38,6 +39,7 @@ namespace Nutrify.Pages
         private void Back_Nutrients_Clicked(object sender, EventArgs e)
         {
             Navigation.PopAsync();
+            
         }
 
         private async void GetRecipes(string food)
@@ -48,19 +50,62 @@ namespace Nutrify.Pages
 
             Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(response);
 
+            //RESPONSE OBJECT ARRAY
+            Object hits = jObject["hits"];
+            //  Console.WriteLine(test);
+
+
+            //STACK OVERFLOW EXAMPLE
+
+            var root = JsonConvert.DeserializeObject<List<Hit>>(hits.ToString());
+            //var root = JsonConvert.DeserializeObject<RootObject>(test.ToString());
+
+            RootObject getRequest = new RootObject() { hits = root };
+
+         //   Recipe recipeList = new Recipe() {  };
+
+            Console.WriteLine(getRequest.hits[0].recipe.label);
+
+            recipeList.ItemsSource = new List<Recipe>()
+            {
+                new Recipe(){ label = getRequest.hits[0].recipe.label, image = getRequest.hits[0].recipe.image, calories = getRequest.hits[0].recipe.calories, totalTime = getRequest.hits[0].recipe.totalTime }
+            };
+
             
-           // var recipesHit = JsonConvert.DeserializeObject<List<Recipe>>(response);
-
-
-            var recipesHit = JsonConvert.DeserializeObject<List<Recipe>>((string)jObject["hits"]);
-
-            Console.WriteLine(recipesHit);
-      //      var test = JsonConvert.DeserializeObject<Recipe>(jObject.ToString());
-
-         Collection<Recipe> trends = new Collection<Recipe>(recipesHit);
-
-            recipeList.ItemsSource = trends;
+            //BindingContext = this;
+            //SetBinding(Label.TextProperty, getRequest.hits[0].recipe.ingredientLines[0]);
             
+            //    Hit myObj = new Hit();
+
+
+            // Recipe item = new Recipe();
+            // item.label = myObj.ToString(); // Or whatever display text you need
+            //                                //  item.Tag = myObj;
+
+            //// item = JsonConvert.DeserializeObject(response);
+
+            // // Setup other things like SubItems, Font, ...
+
+            // //  listView.Items.Add(item);
+            // recipeList.ItemsSource = item.label;
+
+
+
+            //OTHER ATTEMPTS
+
+            //var recipesHit = JsonConvert.DeserializeObject<List<Recipe>>(test.ToString());
+            //Console.WriteLine(recipesHit);
+
+
+            //      var recipesHit = JsonConvert.DeserializeObject<List<Recipe>>((string)jObject["hits"]);
+
+            //      Console.WriteLine(recipesHit);
+            ////      var test = JsonConvert.DeserializeObject<Recipe>(jObject.ToString());
+
+            //   Collection<Recipe> trends = new Collection<Recipe>(recipesHit);
+
+            //      recipeList.ItemsSource = trends;
+
 
             //  (string)jObject["parsed"][0]["food"]["label"];
 

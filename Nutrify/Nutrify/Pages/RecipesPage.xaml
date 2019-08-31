@@ -9,10 +9,10 @@
              BackgroundColor="#F2F2F2">
 
     <StackLayout Padding="0">
-        <StackLayout HorizontalOptions="FillAndExpand" Padding="10,30,20,15">
+        <StackLayout HorizontalOptions="FillAndExpand" Padding="30,30,20,15">
             <ImageButton Source="backYellow" VerticalOptions="Start" HorizontalOptions="Start" Clicked="Back_Nutrients_Clicked" Margin="0,-10,0,10" HeightRequest="30"/>
-            <Label Text="Loading..." FontSize="18" Margin="0,0,0,-10" TextColor="#30604A"/>
-            <Label Text="Recipes" FontSize="36" TextColor="#F8AA08"/>
+            <Label Text="Loading..." FontSize="24" Margin="0,0,0,-10" TextColor="#30604A"/>
+            <Label Text="Recipes" FontSize="48" TextColor="#F8AA08"/>
         </StackLayout>
         <StackLayout Padding="20,0,20,20">
             <!--<Label Text="Filter"></Label>-->
@@ -29,13 +29,13 @@
                                         <Frame.Content>
                                             <AbsoluteLayout HorizontalOptions="FillAndExpand">
                                                 <Frame CornerRadius="15" Padding="0" IsClippedToBounds="True" >
-                                                    <Image Aspect="AspectFill" Source="" WidthRequest="75" HeightRequest="75" BackgroundColor="Gray" Margin="0"></Image>
+                                                    <Image Aspect="AspectFill" Source="{Binding image}" WidthRequest="75" HeightRequest="75" BackgroundColor="Gray" Margin="0"></Image>
                                                 </Frame>
                                                 <StackLayout Orientation="Vertical" Margin="95,0,30,0">
-                                                    <Label Text="{Binding title}" LineBreakMode="TailTruncation" FontSize="18" TextColor="#30604A"/>
+                                                    <Label Text="{Binding label}" LineBreakMode="TailTruncation" FontSize="18" TextColor="#30604A"/>
                                                     <StackLayout Orientation="Horizontal">
-                                                        <Label Text="Time" TextColor="#F8AA08"></Label>
-                                                        <Label Text="Cal" Margin="40,0,0,0" TextColor="#F8AA08"></Label>
+                                                        <Label Text="{Binding totalTime}" TextColor="#F8AA08"></Label>
+                                                        <Label Text="{Binding calories}" Margin="40,0,0,0" TextColor="#F8AA08"></Label>
                                                     </StackLayout>
                                                 </StackLayout>
                                                 <!--<Image AbsoluteLayout.LayoutBounds="1, 0, 25, 25"
