@@ -37,36 +37,45 @@ namespace Nutrify.Pages
         {
             client = new HttpClient();
 
-            var response = await client.GetStringAsync("https://api.edamam.com/search?q=" + food + "&app_id=" + foodAppId + "&app_key=" + foodAppKey);
-
-            Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(response);
-
-
-            //RESPONSE OBJECT ARRAY OF HITS
-            Object hits = jObject["hits"];
-
-            //STACK OVERFLOW EXAMPLE
-            var root = JsonConvert.DeserializeObject<List<Hit>>(hits.ToString());
-
-            RootObject getRequest = new RootObject() { hits = root };
-
-            
-            var recipeListing = new List<Recipe>(); //var to add recipes to in loop
-
-            //loops through the jObjects array and adds the data to recipeListing for listview
-            for (int ndx = 0; ndx < jObject["hits"].Count(); ndx++)
+            try
             {
-                if (getRequest.hits[ndx].recipe.image == null)
+                var response = await client.GetStringAsync("https://api.edamam.com/search?q=" + food + "&app_id=" + foodAppId + "&app_key=" + foodAppKey);
+
+                Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(response);
+
+
+                //RESPONSE OBJECT ARRAY OF HITS
+                Object hits = jObject["hits"];
+
+                //STACK OVERFLOW EXAMPLE
+                var root = JsonConvert.DeserializeObject<List<Hit>>(hits.ToString());
+
+                RootObject getRequest = new RootObject() { hits = root };
+
+
+                var recipeListing = new List<Recipe>(); //var to add recipes to in loop
+
+                //loops through the jObjects array and adds the data to recipeListing for listview
+                for (int ndx = 0; ndx < jObject["hits"].Count(); ndx++)
                 {
-                    getRequest.hits[ndx].recipe.image = "noImage";
+                    //if (getRequest.hits[ndx].recipe.image == null)
+                    //{
+                    //    getRequest.hits[ndx].recipe.image = "noImage";
+                    //}
+
+                    recipeListing.Add(new Recipe { label = getRequest.hits[ndx].recipe.label, image = getRequest.hits[ndx].recipe.image, calories = getRequest.hits[ndx].recipe.calories, totalTime = getRequest.hits[ndx].recipe.totalTime });
+
                 }
 
-                recipeListing.Add(new Recipe { label = getRequest.hits[ndx].recipe.label, image = getRequest.hits[ndx].recipe.image, calories = getRequest.hits[ndx].recipe.calories, totalTime = getRequest.hits[ndx].recipe.totalTime });
-
+                recipeList.ItemsSource = recipeListing; //set listview equal to list with data.
 
             }
+            catch
+            {
+                await Navigation.PushAsync(new NotFoundPage("We couldn't find recipes matching that food.", "greenCharacter", "backYellow"));
+            }
 
-            recipeList.ItemsSource = recipeListing; //set listview equal to list with data.
+            
 
            
 

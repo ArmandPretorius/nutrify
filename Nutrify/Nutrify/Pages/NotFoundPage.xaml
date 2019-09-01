@@ -7,10 +7,16 @@
              NavigationPage.HasNavigationBar="False"
              x:Class="Nutrify.Pages.NotFoundPage">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand">
-            <Label Text="Oops! Seems like we couldn't Nutrify that specific food."/>
-            <Image Source="" HorizontalOptions="FillAndExpand"/>
+        <StackLayout>
+
+            <ImageButton x:Name="backButtonColor" Source="backGreen" VerticalOptions="Start" HorizontalOptions="Start" Clicked="Back_Function_Clicked" Margin="30,30,0,-60" HeightRequest="30"/>
+            <StackLayout VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" Padding="30">
+                <Image x:Name="errorImage" Source="greenCharacter" HorizontalOptions="FillAndExpand" Margin="0,0,0,20"/>
+                <Label Text="Oopsie Daisy!" FontSize="36" TextColor="#B42D2A" HorizontalOptions="CenterAndExpand"/>
+                <Label x:Name="errorMessage" Text="Error Message" FontSize="18" TextColor="#30604A" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+            </StackLayout>
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

@@ -12,9 +12,18 @@ namespace Nutrify.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotFoundPage : ContentPage
     {
-        public NotFoundPage()
+        public NotFoundPage(string errorBody, string ErrorImg, string backButton)
         {
             InitializeComponent();
+
+            errorMessage.Text = errorBody;
+            errorImage.Source = ErrorImg;
+            backButtonColor.Source = backButton;
+        }
+
+        private void Back_Function_Clicked(object sender, EventArgs e)
+        {
+                Navigation.PopToRootAsync();
         }
     }
 }

@@ -28,24 +28,34 @@ namespace Nutrify.Pages
 
             private async void GetNutrients(string food)
         {
-            Console.WriteLine("-------------------------------SEARCHING");
+
             client = new HttpClient();
 
-            var response = await client.GetStringAsync("https://api.edamam.com/api/food-database/parser?ingr="+ food + "&app_id=" + foodAppId + "&app_key=" + foodAppKey);
+            try
+            {
+                Console.WriteLine("-------------------------------SEARCHING");
 
-            Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(response);
+                var response = await client.GetStringAsync("https://api.edamam.com/api/food-database/parser?ingr=" + food + "&app_id=" + foodAppId + "&app_key=" + foodAppKey);
 
-            var nutrients = JsonConvert.DeserializeObject(response);
-            //Console.WriteLine(nutrients);
+                Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(response);
 
-            foodName.Text = (string)jObject["parsed"][0]["food"]["label"];
-            foodEnergy.Text = (string)jObject["parsed"][0]["food"]["nutrients"]["ENERC_KCAL"];
-            foodProtein.Text = (string)jObject["parsed"][0]["food"]["nutrients"]["PROCNT"];
-            foodFat.Text = (string)jObject["parsed"][0]["food"]["nutrients"]["FAT"];
-            foodCals.Text = (string)jObject["parsed"][0]["food"]["nutrients"]["CHOCDF"];
-            foodFibre.Text = (string)jObject["parsed"][0]["food"]["nutrients"]["FIBTG"];
+                var nutrients = JsonConvert.DeserializeObject(response);
+                //Console.WriteLine(nutrients);
 
-            Console.WriteLine("-------------------------------GOT IT");
+                foodName.Text = (string)jObject["parsed"][0]["food"]["label"];
+                foodEnergy.Text = (string)jObject["parsed"][0]["food"]["nutrients"]["ENERC_KCAL"];
+                foodProtein.Text = (string)jObject["parsed"][0]["food"]["nutrients"]["PROCNT"];
+                foodFat.Text = (string)jObject["parsed"][0]["food"]["nutrients"]["FAT"];
+                foodCals.Text = (string)jObject["parsed"][0]["food"]["nutrients"]["CHOCDF"];
+                foodFibre.Text = (string)jObject["parsed"][0]["food"]["nutrients"]["FIBTG"];
+
+                Console.WriteLine("-------------------------------GOT IT");
+            }
+            catch
+            {
+                await Navigation.PushAsync(new NotFoundPage("We couldn't Nutrify the food you were looking for. Please go back and try again.", "greenCharacter", "backGreen"));
+            }
+           
         }
 
         private void Recipe_Search_Clicked(object sender, EventArgs e)
