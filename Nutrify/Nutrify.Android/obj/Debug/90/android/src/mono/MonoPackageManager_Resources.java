@@ -8,8 +8,6 @@ public class MonoPackageManager_Resources {
 		"Nutrify.dll",
 		"Plugin.Connectivity.Abstractions.dll",
 		"Plugin.Connectivity.dll",
-		"SQLite.Net.Async.dll",
-		"SQLite.Net.dll",
 		"System.Net.Http.Extensions.dll",
 		"System.Net.Http.Primitives.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",

@@ -22,18 +22,9 @@ namespace Nutrify.Pages
         {
             InitializeComponent();
 
+            foodName.Text = search;
             GetRecipes(search);
 
-            
-            //           recipeList.ItemsSource = new List<Name>()
-            //        {new Name(){ name="This is Ist Message" },
-            //      new Name(){ name="This is Ist Message" },
-            //    new Name(){ name="This is Ist Message" },
-            //           new Name(){ name="This is Ist Message" },
-            //         new Name(){ name="This is Ist Message" },
-            //       new Name(){ name="This is Ist Message" },
-            //     new Name(){ name="This is Ist Message" },
-            //    new Name(){ name="This is 2nd Message"} };
         }
 
         private void Back_Nutrients_Clicked(object sender, EventArgs e)
@@ -50,31 +41,38 @@ namespace Nutrify.Pages
 
             Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(response);
 
-            //RESPONSE OBJECT ARRAY
-            Object hits = jObject["hits"];
-            //  Console.WriteLine(test);
 
+            //RESPONSE OBJECT ARRAY OF HITS
+            Object hits = jObject["hits"];
 
             //STACK OVERFLOW EXAMPLE
-
             var root = JsonConvert.DeserializeObject<List<Hit>>(hits.ToString());
-            //var root = JsonConvert.DeserializeObject<RootObject>(test.ToString());
 
             RootObject getRequest = new RootObject() { hits = root };
 
-         //   Recipe recipeList = new Recipe() {  };
-
-            Console.WriteLine(getRequest.hits[0].recipe.label);
-
-            recipeList.ItemsSource = new List<Recipe>()
-            {
-                new Recipe(){ label = getRequest.hits[0].recipe.label, image = getRequest.hits[0].recipe.image, calories = getRequest.hits[0].recipe.calories, totalTime = getRequest.hits[0].recipe.totalTime }
-            };
-
             
+            var recipeListing = new List<Recipe>(); //var to add recipes to in loop
+
+            //loops through the jObjects array and adds the data to recipeListing for listview
+            for (int ndx = 0; ndx < jObject["hits"].Count(); ndx++)
+            {
+                if (getRequest.hits[ndx].recipe.image == null)
+                {
+                    getRequest.hits[ndx].recipe.image = "noImage";
+                }
+
+                recipeListing.Add(new Recipe { label = getRequest.hits[ndx].recipe.label, image = getRequest.hits[ndx].recipe.image, calories = getRequest.hits[ndx].recipe.calories, totalTime = getRequest.hits[ndx].recipe.totalTime });
+
+
+            }
+
+            recipeList.ItemsSource = recipeListing; //set listview equal to list with data.
+
+           
+
             //BindingContext = this;
             //SetBinding(Label.TextProperty, getRequest.hits[0].recipe.ingredientLines[0]);
-            
+
             //    Hit myObj = new Hit();
 
 
@@ -123,7 +121,7 @@ namespace Nutrify.Pages
 }
 
 
-    //CLASSES
+    //CLASSES OF API
 public class Params
 {
     public List<object> sane { get; set; }

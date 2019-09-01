@@ -46,14 +46,6 @@
               "target": "Package",
               "version": "[2.2.29, )"
             },
-            "SQLite.Net.Async-PCL": {
-              "target": "Package",
-              "version": "[3.1.1, )"
-            },
-            "SQLite.Net.Core-PCL": {
-              "target": "Package",
-              "version": "[3.1.1, )"
-            },
             "Xam.Plugin.Connectivity": {
               "target": "Package",
               "version": "[3.2.0, )"
@@ -133,14 +125,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.2, )"
-            },
-            "SQLite.Net.Async-PCL": {
-              "target": "Package",
-              "version": "[3.1.1, )"
-            },
-            "SQLite.Net.Core-PCL": {
-              "target": "Package",
-              "version": "[3.1.1, )"
             },
             "Xam.Plugin.Connectivity": {
               "target": "Package",
