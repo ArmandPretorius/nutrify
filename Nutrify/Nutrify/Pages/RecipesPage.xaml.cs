@@ -76,7 +76,7 @@ namespace Nutrify.Pages
             catch
             {
                 //navigate to error page
-                await Navigation.PushAsync(new NotFoundPage("We couldn't find recipes matching that food.", "greenCharacter", "backYellow"));
+                await Navigation.PushAsync(new NotFoundPage("We couldn't find recipes matching that food.", "backYellow"));
             }
 
         }

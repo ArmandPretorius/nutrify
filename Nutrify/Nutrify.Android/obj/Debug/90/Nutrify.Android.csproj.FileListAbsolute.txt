@@ -515,11 +515,6 @@ C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\N
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\android\assets\System.Net.Http.Primitives.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\android\assets\System.Net.Primitives.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\android\assets\System.Runtime.InteropServices.dll
-C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable\greencharacter.png
-C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-xxxhdpi\greencharacter.png
-C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-xxhdpi\greencharacter.png
-C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-xhdpi\greencharacter.png
-C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-hdpi\greencharacter.png
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable\time.png
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable\calories.png
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-xxxhdpi\time.png
@@ -530,3 +525,14 @@ C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\N
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-xhdpi\calories.png
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-hdpi\time.png
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-hdpi\calories.png
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable\applecharacter.png
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-hdpi\applecharacter.png
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-xhdpi\applecharacter.png
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-xxhdpi\applecharacter.png
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-xxxhdpi\applecharacter.png
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable\splash_background.xml
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable\splash_logo.png
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-hdpi\splash_logo.png
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-xxxhdpi\splash_logo.png
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-xhdpi\splash_logo.png
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\res\drawable-xxhdpi\splash_logo.png

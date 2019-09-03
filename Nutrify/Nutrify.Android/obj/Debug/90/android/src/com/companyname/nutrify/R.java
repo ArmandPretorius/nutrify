@@ -4612,24 +4612,24 @@ containing a value of this type.
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020051;
         public static final int abc_textfield_search_material=0x7f020052;
         public static final int abc_vector_test=0x7f020053;
-        public static final int avd_hide_password=0x7f020054;
-        public static final int avd_hide_password_1=0x7f02013d;
-        public static final int avd_hide_password_2=0x7f02013e;
-        public static final int avd_hide_password_3=0x7f02013f;
-        public static final int avd_show_password=0x7f020055;
-        public static final int avd_show_password_1=0x7f020140;
-        public static final int avd_show_password_2=0x7f020141;
-        public static final int avd_show_password_3=0x7f020142;
-        public static final int backgreen=0x7f020056;
-        public static final int backyellow=0x7f020057;
-        public static final int calories=0x7f020058;
-        public static final int design_bottom_navigation_item_background=0x7f020059;
-        public static final int design_fab_background=0x7f02005a;
-        public static final int design_ic_visibility=0x7f02005b;
-        public static final int design_ic_visibility_off=0x7f02005c;
-        public static final int design_password_eye=0x7f02005d;
-        public static final int design_snackbar_background=0x7f02005e;
-        public static final int greencharacter=0x7f02005f;
+        public static final int applecharacter=0x7f020054;
+        public static final int avd_hide_password=0x7f020055;
+        public static final int avd_hide_password_1=0x7f02013f;
+        public static final int avd_hide_password_2=0x7f020140;
+        public static final int avd_hide_password_3=0x7f020141;
+        public static final int avd_show_password=0x7f020056;
+        public static final int avd_show_password_1=0x7f020142;
+        public static final int avd_show_password_2=0x7f020143;
+        public static final int avd_show_password_3=0x7f020144;
+        public static final int backgreen=0x7f020057;
+        public static final int backyellow=0x7f020058;
+        public static final int calories=0x7f020059;
+        public static final int design_bottom_navigation_item_background=0x7f02005a;
+        public static final int design_fab_background=0x7f02005b;
+        public static final int design_ic_visibility=0x7f02005c;
+        public static final int design_ic_visibility_off=0x7f02005d;
+        public static final int design_password_eye=0x7f02005e;
+        public static final int design_snackbar_background=0x7f02005f;
         public static final int ic_audiotrack_dark=0x7f020060;
         public static final int ic_audiotrack_light=0x7f020061;
         public static final int ic_dialog_close_dark=0x7f020062;
@@ -4843,14 +4843,16 @@ containing a value of this type.
         public static final int notification_bg_normal=0x7f020132;
         public static final int notification_bg_normal_pressed=0x7f020133;
         public static final int notification_icon_background=0x7f020134;
-        public static final int notification_template_icon_bg=0x7f02013b;
-        public static final int notification_template_icon_low_bg=0x7f02013c;
+        public static final int notification_template_icon_bg=0x7f02013d;
+        public static final int notification_template_icon_low_bg=0x7f02013e;
         public static final int notification_tile_bg=0x7f020135;
         public static final int notify_panel_notification_icon_bg=0x7f020136;
         public static final int search=0x7f020137;
-        public static final int time=0x7f020138;
-        public static final int tooltip_frame_dark=0x7f020139;
-        public static final int tooltip_frame_light=0x7f02013a;
+        public static final int splash_background=0x7f020138;
+        public static final int splash_logo=0x7f020139;
+        public static final int time=0x7f02013a;
+        public static final int tooltip_frame_dark=0x7f02013b;
+        public static final int tooltip_frame_light=0x7f02013c;
     }
     public static final class id {
         public static final int ALT=0x7f0b0039;
@@ -5512,6 +5514,7 @@ containing a value of this type.
         /**  Base theme applied no matter what API 
          */
         public static final int MainTheme_Base=0x7f090201;
+        public static final int MyTheme_Splash=0x7f090203;
         public static final int Platform_AppCompat=0x7f09007f;
         public static final int Platform_AppCompat_Light=0x7f090080;
         public static final int Platform_MaterialComponents=0x7f09018d;

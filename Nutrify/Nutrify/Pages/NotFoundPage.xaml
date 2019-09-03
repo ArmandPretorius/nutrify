@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             BackgroundColor="#F2F2F2"
              NavigationPage.HasNavigationBar="False"
              x:Class="Nutrify.Pages.NotFoundPage">
     <ContentPage.Content>
@@ -12,9 +13,9 @@
             <ImageButton x:Name="backButtonColor" Source="backGreen" VerticalOptions="Start" HorizontalOptions="Start" Clicked="Back_Function_Clicked" Margin="30,30,0,-60" HeightRequest="30"/>
             <StackLayout VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" Padding="30">
-                <Image x:Name="errorImage" Source="greenCharacter" HorizontalOptions="FillAndExpand" Margin="40"/>
-                <Label Text="Got Apples?" FontSize="36" TextColor="#B42D2A" HorizontalOptions="CenterAndExpand"/>
-                <Label x:Name="errorMessage" Text="Error Message" FontSize="18" TextColor="#30604A" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                <Image x:Name="errorImage" Source="appleCharacter" HorizontalOptions="FillAndExpand" Margin="40,40,40,20"/>
+                <Label Text="Did you mean Apple?" FontSize="32" TextColor="#B42D2A" HorizontalOptions="CenterAndExpand"/>
+                <Label x:Name="errorMessage" Text="Error Message" FontSize="18" TextColor="#30604A" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="0,15,0,0"/>
             </StackLayout>
         </StackLayout>
         

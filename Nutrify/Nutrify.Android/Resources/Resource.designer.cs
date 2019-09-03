@@ -5776,58 +5776,58 @@ namespace Nutrify.Droid
 			public const int abc_vector_test = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int avd_hide_password = 2130837588;
-			
-			// aapt resource value: 0x7f02013d
-			public const int avd_hide_password_1 = 2130837821;
-			
-			// aapt resource value: 0x7f02013e
-			public const int avd_hide_password_2 = 2130837822;
-			
-			// aapt resource value: 0x7f02013f
-			public const int avd_hide_password_3 = 2130837823;
+			public const int appleCharacter = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int avd_show_password = 2130837589;
+			public const int avd_hide_password = 2130837589;
+			
+			// aapt resource value: 0x7f02013f
+			public const int avd_hide_password_1 = 2130837823;
 			
 			// aapt resource value: 0x7f020140
-			public const int avd_show_password_1 = 2130837824;
+			public const int avd_hide_password_2 = 2130837824;
 			
 			// aapt resource value: 0x7f020141
-			public const int avd_show_password_2 = 2130837825;
-			
-			// aapt resource value: 0x7f020142
-			public const int avd_show_password_3 = 2130837826;
+			public const int avd_hide_password_3 = 2130837825;
 			
 			// aapt resource value: 0x7f020056
-			public const int backGreen = 2130837590;
+			public const int avd_show_password = 2130837590;
+			
+			// aapt resource value: 0x7f020142
+			public const int avd_show_password_1 = 2130837826;
+			
+			// aapt resource value: 0x7f020143
+			public const int avd_show_password_2 = 2130837827;
+			
+			// aapt resource value: 0x7f020144
+			public const int avd_show_password_3 = 2130837828;
 			
 			// aapt resource value: 0x7f020057
-			public const int backYellow = 2130837591;
+			public const int backGreen = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int calories = 2130837592;
+			public const int backYellow = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int design_bottom_navigation_item_background = 2130837593;
+			public const int calories = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int design_fab_background = 2130837594;
+			public const int design_bottom_navigation_item_background = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int design_ic_visibility = 2130837595;
+			public const int design_fab_background = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int design_ic_visibility_off = 2130837596;
+			public const int design_ic_visibility = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int design_password_eye = 2130837597;
+			public const int design_ic_visibility_off = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int design_snackbar_background = 2130837598;
+			public const int design_password_eye = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int greenCharacter = 2130837599;
+			public const int design_snackbar_background = 2130837599;
 			
 			// aapt resource value: 0x7f020060
 			public const int ic_audiotrack_dark = 2130837600;
@@ -6468,11 +6468,11 @@ namespace Nutrify.Droid
 			// aapt resource value: 0x7f020134
 			public const int notification_icon_background = 2130837812;
 			
-			// aapt resource value: 0x7f02013b
-			public const int notification_template_icon_bg = 2130837819;
+			// aapt resource value: 0x7f02013d
+			public const int notification_template_icon_bg = 2130837821;
 			
-			// aapt resource value: 0x7f02013c
-			public const int notification_template_icon_low_bg = 2130837820;
+			// aapt resource value: 0x7f02013e
+			public const int notification_template_icon_low_bg = 2130837822;
 			
 			// aapt resource value: 0x7f020135
 			public const int notification_tile_bg = 2130837813;
@@ -6484,13 +6484,19 @@ namespace Nutrify.Droid
 			public const int search = 2130837815;
 			
 			// aapt resource value: 0x7f020138
-			public const int time = 2130837816;
+			public const int splash_background = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int tooltip_frame_dark = 2130837817;
+			public const int splash_logo = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int tooltip_frame_light = 2130837818;
+			public const int time = 2130837818;
+			
+			// aapt resource value: 0x7f02013b
+			public const int tooltip_frame_dark = 2130837819;
+			
+			// aapt resource value: 0x7f02013c
+			public const int tooltip_frame_light = 2130837820;
 			
 			static Drawable()
 			{
@@ -8517,6 +8523,9 @@ namespace Nutrify.Droid
 			
 			// aapt resource value: 0x7f090201
 			public const int MainTheme_Base = 2131296769;
+			
+			// aapt resource value: 0x7f090203
+			public const int MyTheme_Splash = 2131296771;
 			
 			// aapt resource value: 0x7f09007f
 			public const int Platform_AppCompat = 2131296383;
