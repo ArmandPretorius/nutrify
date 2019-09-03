@@ -14,12 +14,12 @@
             <Label Text="Loading..." x:Name="foodName" FontSize="24" Margin="0,0,0,-10" TextColor="#30604A"/>
             <Label Text="Recipes" FontSize="48" TextColor="#F8AA08"/>
         </StackLayout>
-        <StackLayout Padding="20,0,20,20">
-            <!--<Label Text="Filter"></Label>-->
-        </StackLayout>
+        <!--<StackLayout Padding="20,0,20,20">
+            <Label Text="Filter"></Label>
+        </StackLayout>-->
 
         <StackLayout Padding="20,20,20,0">
-            <ListView x:Name="recipeList" HasUnevenRows="True" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
+            <ListView x:Name="recipeList" HasUnevenRows="True" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" ItemTapped="RecipeList_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -28,14 +28,16 @@
                                     <Frame Padding="5,5,10,5" BackgroundColor="Transparent">
                                         <Frame.Content>
                                             <AbsoluteLayout HorizontalOptions="FillAndExpand">
-                                                <Frame CornerRadius="15" Padding="0" IsClippedToBounds="True" >
-                                                    <Image Aspect="AspectFill" Source="{Binding image}" WidthRequest="75" HeightRequest="75" BackgroundColor="Gray" Margin="0"></Image>
+                                                <Frame CornerRadius="15" Padding="0" IsClippedToBounds="True">
+                                                    <Image Aspect="AspectFill" Source="{Binding image}" WidthRequest="75" HeightRequest="75" Margin="0"/>
                                                 </Frame>
                                                 <StackLayout Orientation="Vertical" Margin="95,0,30,0">
                                                     <Label Text="{Binding label}" LineBreakMode="TailTruncation" FontSize="18" TextColor="#30604A"/>
                                                     <StackLayout Orientation="Horizontal">
+                                                        <Image Source="time" HeightRequest="18"/>
                                                         <Label Text="{Binding totalTime}" TextColor="#F8AA08"></Label>
-                                                        <Label Text="{Binding calories}" Margin="40,0,0,0" TextColor="#F8AA08"></Label>
+                                                        <Image Source="calories" Margin="40,0,0,0" HeightRequest="18"/>
+                                                        <Label Text="{Binding calories}"  TextColor="#F8AA08"></Label>
                                                     </StackLayout>
                                                 </StackLayout>
                                                 <!--<Image AbsoluteLayout.LayoutBounds="1, 0, 25, 25"
@@ -50,6 +52,7 @@
                                 </Frame.Content>
                             </Frame>
                         </ViewCell>
+                       
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

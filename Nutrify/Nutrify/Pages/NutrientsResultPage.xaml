@@ -35,31 +35,31 @@
 
                     <StackLayout  Grid.Row="1" Grid.Column="0" Padding="10,20,10,0">
                         <Label x:Name="foodEnergy" FontSize="36" Text="0" TextColor="#264830"></Label>
-                        <Label Text="Energy" FontSize="18" TextColor="#30604A"></Label>
+                        <Label Text="Energy (k/cal)" FontSize="18" TextColor="#30604A"></Label>
                     </StackLayout>
 
                     <StackLayout  Grid.Row="1" Grid.Column="1" Padding="0,20,10,0">
                         <Label x:Name="foodProtein" FontSize="36" Text="0" TextColor="#264830"></Label>
-                        <Label Text="Protein" FontSize="18" TextColor="#30604A"></Label>
+                        <Label Text="Protein (g)" FontSize="18" TextColor="#30604A"></Label>
                     </StackLayout>
 
                     <StackLayout  Grid.Row="2" Grid.Column="0" Padding="10,20,10,0">
                         <Label x:Name="foodFat"  FontSize="36" Text="0" TextColor="#264830"></Label>
-                        <Label Text="Fat" FontSize="18" TextColor="#30604A"></Label>
+                        <Label Text="Fat (g)" FontSize="18" TextColor="#30604A"></Label>
                     </StackLayout>
 
                     <StackLayout  Grid.Row="2" Grid.Column="1" Padding="0,20,10,0">
                         <Label x:Name="foodCals"  FontSize="36" Text="0" TextColor="#264830"></Label>
-                        <Label Text="Calories" FontSize="18" TextColor="#30604A"></Label>
+                        <Label Text="Carbs (g)" FontSize="18" TextColor="#30604A"></Label>
                     </StackLayout>
 
                     <StackLayout Grid.Row="3" Grid.Column="0" Padding="10,20,10,0">
                         <Label x:Name="foodFibre"  FontSize="36" Text="0" TextColor="#264830"></Label>
-                        <Label Text="Fibres" FontSize="18" TextColor="#30604A"></Label>
+                        <Label Text="Fibres (g)" FontSize="18" TextColor="#30604A"></Label>
                     </StackLayout>
 
                     <StackLayout Grid.ColumnSpan="2" Grid.Row="4" Grid.Column="0" Padding="10" Margin="0,20,0,20">
-                        <Button Text="find recipes" BackgroundColor="#6FAC2B" Padding="5" CornerRadius="200" TextColor="#F2F2F2" Clicked="Recipe_Search_Clicked" HeightRequest="56" FontSize="24" HorizontalOptions="FillAndExpand"></Button>
+                        <Button Text="Find Recipes" BackgroundColor="#6FAC2B" Padding="5" CornerRadius="200" TextColor="#F2F2F2" Clicked="Recipe_Search_Clicked" HeightRequest="56" FontSize="24" HorizontalOptions="FillAndExpand"></Button>
                     </StackLayout>
 
                 </Grid>

@@ -10,9 +10,8 @@ namespace Nutrify
         {
             InitializeComponent();
 
-           //MainPage = new Pages.NotFoundPage("We Couldn't Nutrify that type of food. Please try again", "greenCharacter", "backGreen");
-          //  MainPage = new Pages.RecipesPage("Apple");
-            MainPage = new NavigationPage(new Pages.SearchPage());
+            MainPage = new Pages.RecipesPage("Banana");
+          //  MainPage = new NavigationPage(new Pages.SearchPage());
         }
 
         protected override void OnStart()

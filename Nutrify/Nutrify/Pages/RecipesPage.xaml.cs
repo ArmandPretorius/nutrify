@@ -18,6 +18,9 @@ namespace Nutrify.Pages
         HttpClient client;
         private string foodAppId = "00814198";
         private string foodAppKey = "733f3bd5ce4816806fda09c020a90128";
+
+        public List<Ingredient> ingredients;
+
         public RecipesPage(string search)
         {
             InitializeComponent();
@@ -58,73 +61,42 @@ namespace Nutrify.Pages
                 //loops through the jObjects array and adds the data to recipeListing for listview
                 for (int ndx = 0; ndx < jObject["hits"].Count(); ndx++)
                 {
-                    //if (getRequest.hits[ndx].recipe.image == null)
-                    //{
-                    //    getRequest.hits[ndx].recipe.image = "noImage";
-                    //}
+                    recipeListing.Add(new Recipe {
+                        label = getRequest.hits[ndx].recipe.label,
+                        image = getRequest.hits[ndx].recipe.image,
+                        calories = Math.Truncate(getRequest.hits[ndx].recipe.calories * 100) / 100,
+                        totalTime = getRequest.hits[ndx].recipe.totalTime });
 
-                    recipeListing.Add(new Recipe { label = getRequest.hits[ndx].recipe.label, image = getRequest.hits[ndx].recipe.image, calories = getRequest.hits[ndx].recipe.calories, totalTime = getRequest.hits[ndx].recipe.totalTime });
-
+                  //  ingredients = getRequest.hits[ndx].recipe.ingredients;
                 }
 
                 recipeList.ItemsSource = recipeListing; //set listview equal to list with data.
-
+               
             }
             catch
             {
+                //navigate to error page
                 await Navigation.PushAsync(new NotFoundPage("We couldn't find recipes matching that food.", "greenCharacter", "backYellow"));
             }
 
-            
+        }
 
-           
+        private void RecipeList_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            Console.WriteLine("Tapped!");
+            if (recipeList.SelectedItem != null)
+            {
+                //Set selected conversation information
+                var selectedRecipe = (Recipe)recipeList.SelectedItem;
+                Console.WriteLine(selectedRecipe);
+                //Navigate to recipeinfo page
+             //   Navigation.PushAsync(new NotFoundPage(selectedRecipe, ingredients)); ;
 
-            //BindingContext = this;
-            //SetBinding(Label.TextProperty, getRequest.hits[0].recipe.ingredientLines[0]);
+                //Send Information
+             //   MessagingCenter.Send<Page, Class>(this, "ConvoProp", selectConvo);
 
-            //    Hit myObj = new Hit();
-
-
-            // Recipe item = new Recipe();
-            // item.label = myObj.ToString(); // Or whatever display text you need
-            //                                //  item.Tag = myObj;
-
-            //// item = JsonConvert.DeserializeObject(response);
-
-            // // Setup other things like SubItems, Font, ...
-
-            // //  listView.Items.Add(item);
-            // recipeList.ItemsSource = item.label;
-
-
-
-            //OTHER ATTEMPTS
-
-            //var recipesHit = JsonConvert.DeserializeObject<List<Recipe>>(test.ToString());
-            //Console.WriteLine(recipesHit);
-
-
-            //      var recipesHit = JsonConvert.DeserializeObject<List<Recipe>>((string)jObject["hits"]);
-
-            //      Console.WriteLine(recipesHit);
-            ////      var test = JsonConvert.DeserializeObject<Recipe>(jObject.ToString());
-
-            //   Collection<Recipe> trends = new Collection<Recipe>(recipesHit);
-
-            //      recipeList.ItemsSource = trends;
-
-
-            //  (string)jObject["parsed"][0]["food"]["label"];
-
-            //foreach (object recipeitem in jObject["hints"])
-            //{
-            //    Console.WriteLine("----------------------------- GETTING");
-            //    recipeList.ItemsSource = new List<Recipe>()
-            //    {
-            //        new Recipe() { name = (string)jObject["hints"][recipeitem]["recipe"]["label"] }
-            //    };
-            //}
-
+            }
+            //Navigation.PushAsync(new NotFoundPage("We couldn't find recipes matching that food.", "greenCharacter", "backYellow"));
         }
     }
 }

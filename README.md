@@ -48,6 +48,10 @@ Changes made and missing elements:
 - I still need to add the ability to save recipes to your device for later viewing in a "recipe 
   book".
 - I'd also like to add the ability to share a recipe with your friends on WhatsApp, email etc.
+- I also didn't have time to implement a filter on the recipe page.
+- Because of the API output, I didn't include an image when searching for a food.
+- Unfortunately, due to time, I was not able to implement the recipe information yet.
+
 ____________________________________________________________________________________________________
 
 
