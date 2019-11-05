@@ -3,11 +3,15 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "Nutrify.Android.dll" comes first in this list. */
 		"Nutrify.Android.dll",
+		"Clarifai.dll",
 		"FormsViewGroup.dll",
 		"Newtonsoft.Json.dll",
 		"Nutrify.dll",
 		"Plugin.Connectivity.Abstractions.dll",
 		"Plugin.Connectivity.dll",
+		"Plugin.CurrentActivity.dll",
+		"Plugin.Media.dll",
+		"Plugin.Permissions.dll",
 		"System.Net.Http.Extensions.dll",
 		"System.Net.Http.Primitives.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",

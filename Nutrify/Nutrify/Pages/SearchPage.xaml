@@ -21,6 +21,8 @@
           
             </Frame>
 
+            <Button Text="Take photo" x:Name="takePhoto" Clicked="TakePhoto_Clicked"></Button>
+
             <Button Text="Search" CornerRadius="200" HeightRequest="56" BackgroundColor="#6FAC2B" FontSize="24" TextColor="#F2F2F2" Padding="5" Margin="130,20,0,0" Clicked="SearchFood"></Button>
 
         </StackLayout>
