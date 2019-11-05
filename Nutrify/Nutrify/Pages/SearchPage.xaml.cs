@@ -9,6 +9,9 @@ using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
+using Clarifai.API;
+using Clarifai.DTOs.Inputs;
+using System.IO;
 
 namespace Nutrify.Pages
 {
@@ -32,8 +35,28 @@ namespace Nutrify.Pages
             await Navigation.PushAsync(new NutrientsResultPage(result));
         }
 
-        public void FindFoodAI(string photopath)
+        public async void FindFoodAI(string photopath)
         {
+            var client = new ClarifaiClient("1f32e3d0787341f7b82e2d10680e07ee");
+
+            var res = await client.PublicModels.FoodModel
+             .Predict(new ClarifaiFileImage(File.ReadAllBytes(photopath)))
+           .ExecuteAsync();
+
+           var food = res.Get().Data[0];
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine($"{food.Name}");
+            Console.WriteLine($"{food.Value}");
+            // Print the concepts
+            //foreach (var food in res.Get().Data)
+            //{
+            //    // Console.WriteLine($"{food.Concepts[0].Name}");
+            //    Console.WriteLine("----------------------------------------------------------------------------------------------------------------------------");
+            //    Console.WriteLine($"{food.Name}");
+            //    Console.WriteLine($"{food.Value}");
+            //}
+
+            await Navigation.PushAsync(new NutrientsResultPage(food.Name));
 
         }
 
