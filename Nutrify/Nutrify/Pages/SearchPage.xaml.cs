@@ -81,7 +81,7 @@ namespace Nutrify.Pages
                 return;
 
             //Get the public album path
-            var aPpath = file.AlbumPath;
+            //var aPpath = file.AlbumPath;
 
             //Get private path
             var path = file.Path;

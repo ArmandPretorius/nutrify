@@ -11,7 +11,12 @@ namespace Nutrify
             InitializeComponent();
 
            // MainPage = new Pages.RecipesPage("Banana");
-            MainPage = new NavigationPage(new Pages.SearchPage());
+            MainPage = new NavigationPage(new Pages.SearchPage())
+            {
+                BarBackgroundColor = Color.FromHex("#F8AA08"),
+                BarTextColor = Color.White
+            };
+            
         }
 
         protected override void OnStart()

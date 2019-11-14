@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
              x:Class="Nutrify.Pages.RecipesPage"
              NavigationPage.HasNavigationBar="False"
@@ -20,6 +21,8 @@
 
         <StackLayout Padding="20,20,20,0">
             <ListView x:Name="recipeList" HasUnevenRows="True" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" ItemTapped="RecipeList_ItemTapped">
+                     
+                      
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -29,7 +32,14 @@
                                         <Frame.Content>
                                             <AbsoluteLayout HorizontalOptions="FillAndExpand">
                                                 <Frame CornerRadius="15" Padding="0" IsClippedToBounds="True">
-                                                    <Image Aspect="AspectFill" Source="{Binding image}" WidthRequest="75" HeightRequest="75" Margin="0"/>
+                                                    <ffimageloading:CachedImage
+		                                            	Aspect="AspectFill" 
+                                                        WidthRequest="75" 
+                                                        HeightRequest="75" 
+                                                        Margin="0"
+		                                            	DownsampleToViewSize="true"
+		                                            	Source="{Binding image}">
+	                                            	</ffimageloading:CachedImage>
                                                 </Frame>
                                                 <StackLayout Orientation="Vertical" Margin="95,0,30,0">
                                                     <Label Text="{Binding label}" LineBreakMode="TailTruncation" FontSize="18" TextColor="#30604A"/>
@@ -40,19 +50,27 @@
                                                         <Label Text="{Binding calories}"  TextColor="#F8AA08"></Label>
                                                     </StackLayout>
                                                 </StackLayout>
-                                                <!--<Image AbsoluteLayout.LayoutBounds="1, 0, 25, 25"
+                                                <Image AbsoluteLayout.LayoutBounds="1, 0, 25, 25"
                                        WidthRequest="25"
                                        HeightRequest="25"
                                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                                       Source="" Aspect="AspectFit"  BackgroundColor="blue"/>-->
+                                       Source="" Aspect="AspectFit"  BackgroundColor="blue">
+                                                    <Image.GestureRecognizers  Command="{Binding Source={x:Reference this}, Path=Command}"
+                                                             CommandParameter="{Binding url}">
+                                                       
+                                                    </Image.GestureRecognizers>
+                                                </Image>
+
                                             </AbsoluteLayout>
                                         </Frame.Content>
 
                                     </Frame>
+                                    
                                 </Frame.Content>
                             </Frame>
                         </ViewCell>
-                       
+
+
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

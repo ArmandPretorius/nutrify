@@ -23,6 +23,8 @@ namespace Nutrify.Droid
             Bundle bundle = null;
             CrossCurrentActivity.Current.Init(this, bundle);
 
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
+
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());

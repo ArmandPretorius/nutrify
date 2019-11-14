@@ -64,6 +64,7 @@ namespace Nutrify.Pages
                     recipeListing.Add(new Recipe {
                         label = getRequest.hits[ndx].recipe.label,
                         image = getRequest.hits[ndx].recipe.image,
+                        url = getRequest.hits[ndx].recipe.url,
                         calories = Math.Truncate(getRequest.hits[ndx].recipe.calories * 100) / 100,
                         totalTime = getRequest.hits[ndx].recipe.totalTime });
 
@@ -83,17 +84,19 @@ namespace Nutrify.Pages
 
         private void RecipeList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Console.WriteLine("Tapped!");
             if (recipeList.SelectedItem != null)
             {
                 //Set selected conversation information
                 var selectedRecipe = (Recipe)recipeList.SelectedItem;
-                Console.WriteLine(selectedRecipe);
+                Console.WriteLine("_______________________________________________________________________________________________________________________________________" + selectedRecipe.url);
+
+                Navigation.PushAsync(new RecipeWebPage(selectedRecipe.url, selectedRecipe.label));
+
                 //Navigate to recipeinfo page
-             //   Navigation.PushAsync(new NotFoundPage(selectedRecipe, ingredients)); ;
+                //   Navigation.PushAsync(new NotFoundPage(selectedRecipe, ingredients)); ;
 
                 //Send Information
-             //   MessagingCenter.Send<Page, Class>(this, "ConvoProp", selectConvo);
+                //   MessagingCenter.Send<Page, Class>(this, "ConvoProp", selectConvo);
 
             }
             //Navigation.PushAsync(new NotFoundPage("We couldn't find recipes matching that food.", "greenCharacter", "backYellow"));
