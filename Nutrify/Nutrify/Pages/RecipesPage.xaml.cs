@@ -92,14 +92,9 @@ namespace Nutrify.Pages
 
                 Navigation.PushAsync(new RecipeWebPage(selectedRecipe));
 
-                //Navigate to recipeinfo page
-                //   Navigation.PushAsync(new NotFoundPage(selectedRecipe, ingredients)); ;
-
-                //Send Information
-                //   MessagingCenter.Send<Page, Class>(this, "ConvoProp", selectConvo);
+               
 
             }
-            //Navigation.PushAsync(new NotFoundPage("We couldn't find recipes matching that food.", "greenCharacter", "backYellow"));
         }
     }
 }

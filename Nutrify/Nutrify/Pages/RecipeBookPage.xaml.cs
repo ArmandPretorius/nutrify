@@ -27,7 +27,35 @@ namespace Nutrify.Pages
             {
                 conn.CreateTable<RecipeBook>();
                 var recipeBook = conn.Table<RecipeBook>().ToList();
+
+                recipeBookList.ItemsSource = recipeBook; //set listview equal to list with data.
             }
+        }
+
+        private void RecipeList_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            if (recipeBookList.SelectedItem != null)
+            {
+                //Set selected conversation information
+                var selectedRecipe = (RecipeBook)recipeBookList.SelectedItem;
+                Console.WriteLine("_______________________________________________________________________________________________________________________________________" + selectedRecipe.Url);
+
+                Recipe readRecipe = new Recipe()
+                {
+                    label = selectedRecipe.Label,
+                    image = selectedRecipe.Image,
+                    calories = selectedRecipe.Calories,
+                    totalTime = selectedRecipe.TotalTime,
+                    url = selectedRecipe.Url
+                };
+
+                Navigation.PushAsync(new RecipeWebPage(readRecipe));
+            }
+        }
+
+        private void BackButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
         }
     }
 }
