@@ -22,7 +22,7 @@
           
             </Frame>
 
-        <ImageButton x:Name="SearchButton" Source="searchButton" HorizontalOptions="End" BackgroundColor="Transparent" Clicked="SearchFood"/>
+        <ImageButton x:Name="SearchButton" Source="searchButton" HorizontalOptions="End" BackgroundColor="Transparent" Clicked="SearchFood" Margin="0,20,0,0"/>
 
         <ImageButton x:Name="RecipeBookButton" Source="recipeBook" HorizontalOptions="End" VerticalOptions="EndAndExpand" BackgroundColor="Transparent" Clicked="RecipeBookButton_Clicked"/>
 

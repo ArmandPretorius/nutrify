@@ -23,6 +23,7 @@ bitmap;obj\Debug\90\res\drawable\splash_background.xml
 cache-path;C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\lp\54\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\90\res\drawable\splash_background.xml
 color;obj\Debug\90\res\values\colors.xml
+color;obj\Debug\90\res\values\styles.xml
 external-cache-path;C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\lp\54\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-files-path;obj\Debug\90\res\xml\file_paths.xml
 external-path;C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 3\Nutrify\Nutrify\Nutrify\Nutrify.Android\obj\Debug\90\lp\54\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml

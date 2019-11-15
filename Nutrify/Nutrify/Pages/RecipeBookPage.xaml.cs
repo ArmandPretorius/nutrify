@@ -14,6 +14,8 @@ namespace Nutrify.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecipeBookPage : ContentPage
     {
+
+
         public RecipeBookPage()
         {
             InitializeComponent();
@@ -28,18 +30,30 @@ namespace Nutrify.Pages
                 conn.CreateTable<RecipeBook>();
                 var recipeBook = conn.Table<RecipeBook>().ToList();
 
+                if (recipeBook.Count == 0)
+                {
+                    errorImage.IsVisible = true;
+                    errorMessage.IsVisible = true;
+                    recipeBookList.IsVisible = false;
+                }
+
                 recipeBookList.ItemsSource = recipeBook; //set listview equal to list with data.
             }
         }
 
         private void RecipeList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
+            //var viewCell = (ViewCell)sender;
+            //if (viewCell.View != null)
+            //{
+            //    viewCell.View.BackgroundColor = Color.Transparent;
+            //}
+
             if (recipeBookList.SelectedItem != null)
             {
                 //Set selected conversation information
                 var selectedRecipe = (RecipeBook)recipeBookList.SelectedItem;
-                Console.WriteLine("_______________________________________________________________________________________________________________________________________" + selectedRecipe.Url);
-
+                //Console.WriteLine("_______________________________________________________________________________________________________________________________________" + selectedRecipe.Id);
                 Recipe readRecipe = new Recipe()
                 {
                     label = selectedRecipe.Label,
@@ -56,6 +70,19 @@ namespace Nutrify.Pages
         private void BackButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PopAsync();
+        }
+
+        private void SaveButton_Clicked(object sender, EventArgs e)
+        {
+            var button = sender as ImageButton;
+            var recipeId = button.CommandParameter;
+            Console.WriteLine("_____________________________________________________________________________TAPPEDREMOVE  " + recipeId);
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                conn.CreateTable<RecipeBook>();
+                conn.Delete<RecipeBook>(recipeId);
+            }
+            OnAppearing();
         }
     }
 }

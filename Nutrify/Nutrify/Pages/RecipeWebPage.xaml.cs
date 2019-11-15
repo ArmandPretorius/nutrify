@@ -40,11 +40,37 @@ namespace Nutrify.Pages
                 Url = recipeSaver.url
             };
 
-            using(SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            //var button = sender as ImageButton;
+            //var recipeId = button.CommandParameter;
+            //var saved = button.Source.ToString();
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
                 conn.CreateTable<RecipeBook>();
-                int rowsAdded = conn.Insert(recipe);
-            }
+                var recipeBookList = conn.Table<RecipeBook>().ToList();
+
+                foreach(var rec in recipeBookList)
+                {
+                    if (rec.Label != recipeSaver.label)
+                    {
+                        int rowsAdded = conn.Insert(recipe);
+                        SaveToDatabaseButton.Source = "heartFilled";
+                        //SaveToDatabaseButton.CommandParameter = rowsAdded;
+                        Console.WriteLine("_________________________________________________________Saved" + rowsAdded);
+                    }
+                }
+            } 
+            //else
+            //{
+            //    using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            //    {
+            //        conn.CreateTable<RecipeBook>();
+            //        conn.Delete<RecipeBook>(recipeId);
+            //        Console.WriteLine("_________________________________________________________Removed");
+            //    }
+            //    SaveToDatabaseButton.Source = "heart";
+            //}
+
+           
 
         }
     }

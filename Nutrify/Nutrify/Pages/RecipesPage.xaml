@@ -26,7 +26,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame Padding="15" CornerRadius="15" Margin="20,0,20,15" BackgroundColor="White">
+                            <Frame Padding="15" CornerRadius="15" Margin="0,0,0,15" BackgroundColor="White">
                                 <Frame.Content>
                                     <Frame Padding="5,5,10,5" BackgroundColor="Transparent">
                                         <Frame.Content>
