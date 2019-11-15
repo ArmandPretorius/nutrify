@@ -6,6 +6,9 @@ namespace Nutrify
 {
     public partial class App : Application
     {
+
+        public static string FilePath;
+
         public App()
         {
             InitializeComponent();
@@ -17,6 +20,21 @@ namespace Nutrify
                 BarTextColor = Color.White
             };
             
+        }
+
+        public App(string filePath)
+        {
+            InitializeComponent();
+
+            // MainPage = new Pages.RecipesPage("Banana");
+            MainPage = new NavigationPage(new Pages.SearchPage())
+            {
+                BarBackgroundColor = Color.FromHex("#F8AA08"),
+                BarTextColor = Color.White
+            };
+
+            FilePath = filePath;
+
         }
 
         protected override void OnStart()

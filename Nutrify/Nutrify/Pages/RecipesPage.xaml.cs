@@ -90,7 +90,7 @@ namespace Nutrify.Pages
                 var selectedRecipe = (Recipe)recipeList.SelectedItem;
                 Console.WriteLine("_______________________________________________________________________________________________________________________________________" + selectedRecipe.url);
 
-                Navigation.PushAsync(new RecipeWebPage(selectedRecipe.url, selectedRecipe.label));
+                Navigation.PushAsync(new RecipeWebPage(selectedRecipe));
 
                 //Navigate to recipeinfo page
                 //   Navigation.PushAsync(new NotFoundPage(selectedRecipe, ingredients)); ;
