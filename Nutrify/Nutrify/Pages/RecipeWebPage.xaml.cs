@@ -16,9 +16,14 @@ namespace Nutrify.Pages
         {
             InitializeComponent();
             webview.Source = url;
-            Title = label;
+            Title.Text = label;
 
 
+        }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
         }
     }
 }

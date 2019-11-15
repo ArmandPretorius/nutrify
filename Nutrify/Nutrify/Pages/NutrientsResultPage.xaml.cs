@@ -53,7 +53,7 @@ namespace Nutrify.Pages
             }
             catch
             {
-                await Navigation.PushAsync(new NotFoundPage("We couldn't Nutrify the food you were looking for. Please go back and try again.", "backGreen"));
+                await Navigation.PushAsync(new NotFoundPage("Sorry, we couldn't Nutrify the food you were looking for. Please try again.", "backGreen"));
             }
            
         }

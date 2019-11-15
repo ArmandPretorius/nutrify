@@ -7,7 +7,7 @@
              Padding="0">
   
         <StackLayout
-                HorizontalOptions="FillAndExpand" Padding="30" Margin="0,100,0,0">
+                HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20" Margin="0,100,0,0">
 
 
         <Image Source="logoText" HorizontalOptions="StartAndExpand"/>
@@ -16,15 +16,16 @@
         <Frame CornerRadius="200" BackgroundColor="#FFFFFF" HeightRequest="56" VerticalOptions="Center"  HorizontalOptions="FillAndExpand" Padding="5">
             <StackLayout Orientation="Horizontal">
                 <Image Source="search" HorizontalOptions="Start" Margin="15,0,0,0"/>
-                <Entry x:Name="searchInput" Placeholder="Search for the food item" FontSize="18" HorizontalOptions="FillAndExpand" Margin="0,5,0,0"/>
+                <Entry x:Name="searchInput" Placeholder="Search for the food item" FontSize="18" HorizontalOptions="FillAndExpand" Margin="0,5,0,5"/>
+                <ImageButton x:Name="CameraButton" Source="camera" HorizontalOptions="End" Clicked="TakePhoto_Clicked" BackgroundColor="Transparent"/>
             </StackLayout>
           
             </Frame>
 
-            <Button Text="Take photo" x:Name="takePhoto" Clicked="TakePhoto_Clicked"></Button>
+        <ImageButton x:Name="SearchButton" Source="searchButton" HorizontalOptions="End" BackgroundColor="Transparent" Clicked="SearchFood"/>
 
-            <Button x:Name="SearchButton" Text="Search" CornerRadius="200" HeightRequest="56" BackgroundColor="#6FAC2B" FontSize="24" TextColor="#F2F2F2" Padding="5" Margin="130,20,0,0" Clicked="SearchFood"></Button>
+        <ImageButton x:Name="RecipeBookButton" Source="recipeBook" HorizontalOptions="End" VerticalOptions="EndAndExpand" BackgroundColor="Transparent" Clicked="RecipeBookButton_Clicked"/>
 
-        </StackLayout>
+    </StackLayout>
     
 </ContentPage>

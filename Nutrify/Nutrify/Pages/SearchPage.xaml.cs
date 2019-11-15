@@ -96,5 +96,11 @@ namespace Nutrify.Pages
             //    return stream;
             //});
         }
+
+        private void RecipeBookButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new RecipeBookPage());
+
+        }
     }
 }
