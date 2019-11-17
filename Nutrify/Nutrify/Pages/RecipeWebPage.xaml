@@ -4,13 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Nutrify.Pages.RecipeWebPage" NavigationPage.HasNavigationBar="False">
+             x:Class="Nutrify.Pages.RecipeWebPage" NavigationPage.HasNavigationBar="False" BackgroundColor="#F2F2F2">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Padding="10" BackgroundColor="#F8AA08" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                 <ImageButton Source="backWhite" BackgroundColor="Transparent" HorizontalOptions="Start" Clicked="ImageButton_Clicked" HeightRequest="30" />
                 <Label Text="" x:Name="Title" TextColor="#F2F2F2" Margin="15,0,0,0" FontSize="Large" LineBreakMode="TailTruncation"/>
-                <ImageButton x:Name="SaveToDatabaseButton"  Source="heart" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" Clicked="SaveToDatabaseButton_Clicked"/>
+                <ImageButton x:Name="saveButton" Source="heart" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="30" Clicked="SaveToDatabaseButton_Clicked"/>
+                <ImageButton x:Name="deleteButton" Source="heartFilled" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="30" Clicked="deleteButton_Clicked" IsVisible="False"/>
             </StackLayout>
             <WebView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="webview">
             </WebView>

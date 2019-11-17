@@ -22,7 +22,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Frame Padding="15" CornerRadius="15" Margin="20,0,20,15" BackgroundColor="White">
+                                <Frame Padding="15" CornerRadius="15" Margin="20,0,20,15" BackgroundColor="White" HasShadow="False">
                                     <Frame.Content>
                                         <Frame Padding="5,5,10,5" BackgroundColor="Transparent">
                                             <Frame.Content>
@@ -51,10 +51,6 @@
                                        HeightRequest="25"
                                        AbsoluteLayout.LayoutFlags="PositionProportional"
                                        Source="heartFilled" Aspect="AspectFit"  BackgroundColor="Transparent">
-                                                        <!--<Im.GestureRecognizers  Command="{Binding Source={x:Reference this}, Path=Command}"
-                                                             CommandParameter="{Binding Url}">
-
-                                                    </Im.GestureRecognizers>-->
                                                     </ImageButton>
 
                                                 </AbsoluteLayout>

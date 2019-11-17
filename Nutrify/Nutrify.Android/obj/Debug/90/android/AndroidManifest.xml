@@ -12,7 +12,7 @@
     <provider android:name="android.support.v4.content.FileProvider" android:authorities="com.companyname.Nutrify.fileprovider" android:exported="false" android:grantUriPermissions="true">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
     </provider>
-    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="Nutrify" android:theme="@style/MyTheme.Splash" android:name="md5452bdd31f42364fed1b626d191333033.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="Nutrify" android:theme="@style/MainTheme.Base" android:name="md5452bdd31f42364fed1b626d191333033.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

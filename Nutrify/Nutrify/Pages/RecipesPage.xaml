@@ -20,13 +20,14 @@
         </StackLayout>-->
 
         <StackLayout Padding="20,20,20,0">
+            <ActivityIndicator x:Name="loadingRecipeIndicator" IsVisible="True" IsRunning="True" Color="#F8AA08" HorizontalOptions="CenterAndExpand"/>
             <ListView x:Name="recipeList" HasUnevenRows="True" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" ItemTapped="RecipeList_ItemTapped">
                      
                       
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame Padding="15" CornerRadius="15" Margin="0,0,0,15" BackgroundColor="White">
+                            <Frame Padding="15" CornerRadius="15" Margin="0,0,0,15" BackgroundColor="White" HasShadow="False">
                                 <Frame.Content>
                                     <Frame Padding="5,5,10,5" BackgroundColor="Transparent">
                                         <Frame.Content>
@@ -50,16 +51,11 @@
                                                         <Label Text="{Binding calories}"  TextColor="#F8AA08"></Label>
                                                     </StackLayout>
                                                 </StackLayout>
-                                                <Image AbsoluteLayout.LayoutBounds="1, 0, 25, 25"
+                                                <ImageButton Clicked="SaveButton_Clicked" AbsoluteLayout.LayoutBounds="1, 0, 25, 25" CommandParameter="{Binding .}"
                                        WidthRequest="25"
                                        HeightRequest="25"
                                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                                       Source="heart" Aspect="AspectFit"  BackgroundColor="Transparent">
-                                                    <Image.GestureRecognizers  Command="{Binding Source={x:Reference this}, Path=Command}"
-                                                             CommandParameter="{Binding url}">
-                                                       
-                                                    </Image.GestureRecognizers>
-                                                </Image>
+                                       Source="{Binding savedHeart}" Aspect="AspectFit"  BackgroundColor="Transparent"/>
 
                                             </AbsoluteLayout>
                                         </Frame.Content>
