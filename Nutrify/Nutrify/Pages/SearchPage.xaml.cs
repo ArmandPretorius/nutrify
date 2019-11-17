@@ -37,27 +37,33 @@ namespace Nutrify.Pages
 
         public async void FindFoodAI(string photopath)
         {
-            var client = new ClarifaiClient("1f32e3d0787341f7b82e2d10680e07ee");
+            findFoodIndicator.IsVisible = true;
+            findFoodIndicator.IsRunning = true;
+            SearchButton.IsVisible = false;
+            searchingLabel.IsVisible = true;
+            searchInput.IsVisible = false;
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                var client = new ClarifaiClient("1f32e3d0787341f7b82e2d10680e07ee");
 
-            var res = await client.PublicModels.FoodModel
-             .Predict(new ClarifaiFileImage(File.ReadAllBytes(photopath)))
-           .ExecuteAsync();
+                var res = await client.PublicModels.FoodModel
+                 .Predict(new ClarifaiFileImage(File.ReadAllBytes(photopath)))
+                .ExecuteAsync();
 
-           var food = res.Get().Data[0];
-            Console.WriteLine("----------------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine($"{food.Name}");
-            Console.WriteLine($"{food.Value}");
-            // Print the concepts
-            //foreach (var food in res.Get().Data)
-            //{
-            //    // Console.WriteLine($"{food.Concepts[0].Name}");
-            //    Console.WriteLine("----------------------------------------------------------------------------------------------------------------------------");
-            //    Console.WriteLine($"{food.Name}");
-            //    Console.WriteLine($"{food.Value}");
-            //}
+                var food = res.Get().Data[0];
+                Console.WriteLine("----------------------------------------------------------------------------------------------------------------------------");
+                Console.WriteLine($"{food.Name}");
+                Console.WriteLine($"{food.Value}");
 
-            await Navigation.PushAsync(new NutrientsResultPage(food.Name));
+                await Navigation.PushAsync(new NutrientsResultPage(food.Name));
 
+                findFoodIndicator.IsVisible = false;
+                findFoodIndicator.IsRunning = false;
+                SearchButton.IsVisible = true;
+                searchingLabel.IsVisible = false;
+                searchInput.IsVisible = true;
+            });
+           
         }
 
         private async void TakePhoto_Clicked(object sender, EventArgs e)
@@ -86,7 +92,7 @@ namespace Nutrify.Pages
             //Get private path
             var path = file.Path;
 
-            await DisplayAlert("path", path, "Ok");
+            //await DisplayAlert("path", path, "Ok");
 
             FindFoodAI(path);
 

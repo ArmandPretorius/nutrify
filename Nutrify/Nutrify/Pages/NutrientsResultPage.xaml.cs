@@ -26,7 +26,7 @@ namespace Nutrify.Pages
             InitializeComponent();
         }
 
-            private async void GetNutrients(string food)
+        private async void GetNutrients(string food)
         {
 
             client = new HttpClient();
@@ -50,6 +50,15 @@ namespace Nutrify.Pages
                 foodFibre.Text = (string)jObject["parsed"][0]["food"]["nutrients"]["FIBTG"];
 
                 Console.WriteLine("-------------------------------GOT IT");
+                loadingIndicator.IsRunning = false;
+                loadingIndicator.IsVisible = false;
+                proteinRow.IsVisible = true;
+                energyRow.IsVisible = true;
+                fatRow.IsVisible = true;
+                carbsRow.IsVisible = true;
+                fibreRow.IsVisible = true;
+                buttonRow.IsVisible = true;
+                infoButton.IsVisible = true;
             }
             catch
             {
@@ -68,5 +77,51 @@ namespace Nutrify.Pages
         {
             Navigation.PopAsync();
         }
+
+        private void Info_Clicked(object sender, EventArgs e)
+        {
+            var button = (ImageButton)sender;
+
+            var selected = button.CommandParameter;
+
+            if(selected == "notSelected")
+            {
+                eneryFor.IsVisible = true;
+                eneryPD.IsVisible = true;
+                proteinFor.IsVisible = true;
+                proteinPD.IsVisible = true;
+                fatFor.IsVisible = true;
+                fatPD.IsVisible = true;
+                carbsFor.IsVisible = true;
+                carbsPD.IsVisible = true;
+                fibresFor.IsVisible = true;
+                fibresPD.IsVisible = true;
+
+                button.CommandParameter = "Selected";
+                button.Source = "infoSelected";
+            } else
+            {
+                eneryFor.IsVisible = false;
+                eneryPD.IsVisible = false;
+                proteinFor.IsVisible = false;
+                proteinPD.IsVisible = false;
+                fatFor.IsVisible = false;
+                fatPD.IsVisible = false;
+                carbsFor.IsVisible = false;
+                carbsPD.IsVisible = false;
+                fibresFor.IsVisible = false;
+                fibresPD.IsVisible = false;
+
+                button.CommandParameter = "notSelected";
+                button.Source = "info";
+
+            }
+
+           
+
+        }
+
+
+        
     }
 }
