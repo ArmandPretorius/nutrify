@@ -7632,28 +7632,25 @@ namespace Nutrify.Droid
 			public const int RootLayout = 2131427405;
 			
 			// aapt resource value: 0x7F0B004E
-			public const int searchRenderAndroid = 2131427406;
+			public const int select_dialog_item_material = 2131427406;
 			
 			// aapt resource value: 0x7F0B004F
-			public const int select_dialog_item_material = 2131427407;
+			public const int select_dialog_multichoice_material = 2131427407;
 			
 			// aapt resource value: 0x7F0B0050
-			public const int select_dialog_multichoice_material = 2131427408;
+			public const int select_dialog_singlechoice_material = 2131427408;
 			
 			// aapt resource value: 0x7F0B0051
-			public const int select_dialog_singlechoice_material = 2131427409;
+			public const int ShellContent = 2131427409;
 			
 			// aapt resource value: 0x7F0B0052
-			public const int ShellContent = 2131427410;
+			public const int support_simple_spinner_dropdown_item = 2131427410;
 			
 			// aapt resource value: 0x7F0B0053
-			public const int support_simple_spinner_dropdown_item = 2131427411;
+			public const int Tabbar = 2131427411;
 			
 			// aapt resource value: 0x7F0B0054
-			public const int Tabbar = 2131427412;
-			
-			// aapt resource value: 0x7F0B0055
-			public const int Toolbar = 2131427413;
+			public const int Toolbar = 2131427412;
 			
 			static Layout()
 			{

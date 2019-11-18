@@ -84,13 +84,12 @@ namespace Nutrify.Pages
                             totalTime = getRequest.hits[ndx].recipe.totalTime,
                             saveicon = "heart",
                         });
-
-
                         foreach (var rec in recipeBookList)
                         {
                             //Check if is in recipebook
                             if (rec.Label == getRequest.hits[ndx].recipe.label)
                             {
+                               recipeListing.RemoveAt(ndx);
                                 recipeListing.Add(new Recipe
                                 {
                                     label = rec.Label,
@@ -101,15 +100,14 @@ namespace Nutrify.Pages
                                     recipeBookId = rec.Id,
                                     saveicon = "heartFilled"
                                 });
+
+                                
                             }
-                        }  
+                         
+                        }
 
-                    }
-
-                    //foreach (var rec in recipeListing)
-                    //{
                         
-                    //}
+                    }
 
                 }
             
@@ -166,8 +164,8 @@ namespace Nutrify.Pages
                     conn.CreateTable<RecipeBook>();
                     var recipeBookList = conn.Table<RecipeBook>().ToList();
                     int rowsAdded = conn.Insert(recipe);
-
                     button.Source = "heartFilled";
+                   // recipeSaver.saveicon = "heartFilled";
 
                 }
             }
@@ -178,11 +176,12 @@ namespace Nutrify.Pages
                 {
                     conn.CreateTable<RecipeBook>();
                     conn.Delete<RecipeBook>(recipeSaver.recipeBookId);
+                    button.Source = "heart";
+                   // recipeSaver.saveicon = "heart";
                 }
             }
 
         }
-
 
     }
 }
