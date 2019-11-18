@@ -41,46 +41,46 @@
                     <StackLayout  Grid.Row="1" Grid.Column="0" Padding="10,20,10,0"  x:Name="energyRow" IsVisible="False">
                         <StackLayout Orientation="Horizontal">
                             <Label x:Name="foodEnergy" FontSize="36" Text="0" TextColor="#264830" VerticalOptions="EndAndExpand"></Label>
-                            <Label x:Name="eneryPD" FontSize="14" Text="/8,700 pd" TextColor="#6FAC2B" VerticalOptions="EndAndExpand" IsVisible="False" Margin="0,0,0,5"></Label>
+                            <Label x:Name="eneryPD" FontSize="14" Text="/8,700 pd" TextColor="#6FAC2B" VerticalOptions="EndAndExpand" IsVisible="False" Margin="-2,0,0,5"></Label>
                         </StackLayout>
                         <Label Text="Energy (k/cal)" FontSize="18" TextColor="#30604A"></Label>
-                        <Label x:Name="eneryFor" Text="Energy" FontSize="14" TextColor="#6FAC2B" IsVisible="False" Margin="0,-2,0,0"></Label>
+                        <Label x:Name="eneryFor" Text="Energy" FontSize="14" TextColor="#6FAC2B" IsVisible="False" Margin="0,-4,0,0"></Label>
                     </StackLayout>
 
                     <StackLayout Grid.Row="1" Grid.Column="1" Padding="0,20,10,0" x:Name="proteinRow" IsVisible="False">
                         <StackLayout Orientation="Horizontal">
                             <Label x:Name="foodProtein" FontSize="36" Text="0" TextColor="#264830" VerticalOptions="EndAndExpand"></Label>
-                            <Label x:Name="proteinPD" FontSize="14" Text="/8,700 pd" TextColor="#6FAC2B" VerticalOptions="EndAndExpand" IsVisible="False" Margin="0,0,0,5"></Label>
+                            <Label x:Name="proteinPD" FontSize="14" Text="/50 pd" TextColor="#6FAC2B" VerticalOptions="EndAndExpand" IsVisible="False" Margin="-2,0,0,5"></Label>
                         </StackLayout>
                         <Label Text="Protein (g)" FontSize="18" TextColor="#30604A"></Label>
-                        <Label  x:Name="proteinFor" Text="Strength" FontSize="14" TextColor="#6FAC2B" IsVisible="False" Margin="0,-2,0,0"></Label>
+                        <Label  x:Name="proteinFor" Text="Strength" FontSize="14" TextColor="#6FAC2B" IsVisible="False" Margin="0,-4,0,0"></Label>
                     </StackLayout>
 
                     <StackLayout  Grid.Row="2" Grid.Column="0" Padding="10,20,10,0" x:Name="fatRow" IsVisible="False">
                         <StackLayout Orientation="Horizontal">
                             <Label x:Name="foodFat"  FontSize="36" Text="0" TextColor="#264830" VerticalOptions="EndAndExpand"></Label>
-                            <Label x:Name="fatPD" FontSize="14" Text="/70 pd" TextColor="#6FAC2B" VerticalOptions="EndAndExpand" IsVisible="False" Margin="0,0,0,5"></Label>
+                            <Label x:Name="fatPD" FontSize="14" Text="/70 pd" TextColor="#6FAC2B" VerticalOptions="EndAndExpand" IsVisible="False" Margin="-2,0,0,5"></Label>
                         </StackLayout>
                         <Label Text="Fat (g)" FontSize="18" TextColor="#30604A"></Label>
-                        <Label  x:Name="fatFor" Text="Body Functions" FontSize="14" TextColor="#6FAC2B" IsVisible="False" Margin="0,-2,0,0"></Label>
+                        <Label  x:Name="fatFor" Text="Body Functions" FontSize="14" TextColor="#6FAC2B" IsVisible="False" Margin="0,-4,0,0"></Label>
                     </StackLayout>
 
                     <StackLayout  Grid.Row="2" Grid.Column="1" Padding="0,20,10,0" x:Name="carbsRow" IsVisible="False">
                         <StackLayout Orientation="Horizontal">
                             <Label x:Name="foodCals"  FontSize="36" Text="0" TextColor="#264830" VerticalOptions="EndAndExpand"></Label>
-                            <Label x:Name="carbsPD" FontSize="14" Text="/310 pd" TextColor="#6FAC2B" VerticalOptions="EndAndExpand" IsVisible="False" Margin="0,0,0,5"></Label>
+                            <Label x:Name="carbsPD" FontSize="14" Text="/310 pd" TextColor="#6FAC2B" VerticalOptions="EndAndExpand" IsVisible="False" Margin="-2,0,0,5"></Label>
                         </StackLayout>
                         <Label Text="Carbs (g)" FontSize="18" TextColor="#30604A"></Label>
-                        <Label  x:Name="carbsFor" Text="Fuel" FontSize="14" TextColor="#6FAC2B" IsVisible="False" Margin="0,-2,0,0"></Label>
+                        <Label  x:Name="carbsFor" Text="Fuel" FontSize="14" TextColor="#6FAC2B" IsVisible="False" Margin="0,-4,0,0"></Label>
                     </StackLayout>
 
                     <StackLayout Grid.Row="3" Grid.Column="0" Padding="10,20,10,0"  x:Name="fibreRow" IsVisible="False">
                         <StackLayout Orientation="Horizontal">
                             <Label x:Name="foodFibre"  FontSize="36" Text="0" TextColor="#264830" VerticalOptions="EndAndExpand"></Label>
-                            <Label x:Name="fibresPD" FontSize="14" Text="/30 pd" TextColor="#6FAC2B" VerticalOptions="EndAndExpand" IsVisible="False" Margin="0,0,0,5"></Label>
+                            <Label x:Name="fibresPD" FontSize="14" Text="/30 pd" TextColor="#6FAC2B" VerticalOptions="EndAndExpand" IsVisible="False" Margin="-2,0,0,5"></Label>
                         </StackLayout>
                         <Label Text="Fibres (g)" FontSize="18" TextColor="#30604A"></Label>
-                        <Label  x:Name="fibresFor" Text="Cleanse" FontSize="14" TextColor="#6FAC2B" IsVisible="False" Margin="0,-2,0,0"></Label>
+                        <Label  x:Name="fibresFor" Text="Cleanse" FontSize="14" TextColor="#6FAC2B" IsVisible="False" Margin="0,-4,0,0"></Label>
                     </StackLayout>
 
                     <StackLayout Grid.ColumnSpan="2" Grid.Row="4" Grid.Column="0" Padding="10" Margin="0,20,0,20" x:Name="buttonRow" IsVisible="False">

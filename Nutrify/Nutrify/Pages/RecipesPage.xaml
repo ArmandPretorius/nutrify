@@ -21,9 +21,9 @@
 
         <StackLayout Padding="20,20,20,0">
             <ActivityIndicator x:Name="loadingRecipeIndicator" IsVisible="True" IsRunning="True" Color="#F8AA08" HorizontalOptions="CenterAndExpand"/>
-            <ListView x:Name="recipeList" HasUnevenRows="True" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" ItemTapped="RecipeList_ItemTapped">
-                     
-                      
+            
+            <!--other List-->
+            <ListView x:Name="recipeList" HasUnevenRows="True" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" ItemTapped="RecipeList_ItemTapped" Margin="0,0,0,0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -55,7 +55,7 @@
                                        WidthRequest="25"
                                        HeightRequest="25"
                                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                                       Source="{Binding savedHeart}" Aspect="AspectFit"  BackgroundColor="Transparent"/>
+                                       Source="{Binding saveicon}" Aspect="AspectFit"  BackgroundColor="Transparent"/>
 
                                             </AbsoluteLayout>
                                         </Frame.Content>

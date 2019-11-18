@@ -545,7 +545,8 @@ public class Recipe
     public TotalNutrients totalNutrients { get; set; }
     public TotalDaily totalDaily { get; set; }
     public List<Digest> digest { get; set; }
-    public string savedHeart { get; set; }
+    public int recipeBookId { get; set; }
+    public string saveicon { get; set; }
 }
 
 public class Hit

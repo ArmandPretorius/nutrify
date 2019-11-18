@@ -22,15 +22,22 @@ namespace Nutrify.Pages
         private string foodAppId = "00814198";
         private string foodAppKey = "733f3bd5ce4816806fda09c020a90128";
 
-        public List<Ingredient> ingredients;
+        public string foodSearch;
 
         public RecipesPage(string search)
         {
             InitializeComponent();
 
             foodName.Text = search;
-            GetRecipes(search);
+            foodSearch = search;
+           
 
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            GetRecipes(foodSearch);
         }
 
         private void Back_Nutrients_Clicked(object sender, EventArgs e)
@@ -58,6 +65,7 @@ namespace Nutrify.Pages
                 RootObject getRequest = new RootObject() { hits = root };
 
                 var recipeListing = new List<Recipe>(); //var to add recipes to in loop
+                var recipeBookListing = new List<Recipe>();
 
                 using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
                 {
@@ -66,43 +74,48 @@ namespace Nutrify.Pages
 
                     //loops through the jObjects array and adds the data to recipeListing for listview
                     for (int ndx = 0; ndx < jObject["hits"].Count(); ndx++)
+                    {
+                        recipeListing.Add(new Recipe
                         {
+                            label = getRequest.hits[ndx].recipe.label,
+                            image = getRequest.hits[ndx].recipe.image,
+                            url = getRequest.hits[ndx].recipe.url,
+                            calories = Math.Truncate(getRequest.hits[ndx].recipe.calories * 100) / 100,
+                            totalTime = getRequest.hits[ndx].recipe.totalTime,
+                            saveicon = "heart",
+                        });
+
+
                         foreach (var rec in recipeBookList)
                         {
+                            //Check if is in recipebook
+                            if (rec.Label == getRequest.hits[ndx].recipe.label)
+                            {
+                                recipeListing.Add(new Recipe
+                                {
+                                    label = rec.Label,
+                                    image = rec.Image,
+                                    url = rec.Url,
+                                    calories = rec.Calories,
+                                    totalTime = rec.TotalTime,
+                                    recipeBookId = rec.Id,
+                                    saveicon = "heartFilled"
+                                });
+                            }
+                        }  
 
-                            //if (rec.Label == getRequest.hits[ndx].recipe.label)
-                            //{
-                            //    recipeListing.Add(new Recipe
-                            //    {
-                            //        label = rec.Label,
-                            //        image = rec.Image,
-                            //        url = rec.Url,
-                            //        calories = rec.Calories,
-                            //        totalTime = rec.TotalTime,
-                            //        savedHeart = "heartFilled"
-                            //    });
-                            //}
+                    }
 
-                            //if (rec.Label != getRequest.hits[ndx].recipe.label)
-                            //{
-                            //    recipeListing.Add(new Recipe
-                            //    {
-                            //        label = getRequest.hits[ndx].recipe.label,
-                            //        image = getRequest.hits[ndx].recipe.image,
-                            //        url = getRequest.hits[ndx].recipe.url,
-                            //        calories = Math.Truncate(getRequest.hits[ndx].recipe.calories * 100) / 100,
-                            //        totalTime = getRequest.hits[ndx].recipe.totalTime,
-                            //        savedHeart = "heart"
-                            //    });
-                            //}
-                        }
-                }
-
+                    //foreach (var rec in recipeListing)
+                    //{
+                        
+                    //}
 
                 }
             
                 loadingRecipeIndicator.IsVisible = false;
                 loadingRecipeIndicator.IsRunning = false;
+               
                 recipeList.ItemsSource = recipeListing; //set listview equal to list with data.
             
             }
@@ -146,15 +159,30 @@ namespace Nutrify.Pages
                 Url = recipeSaver.url
             };
 
-            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            if(recipeSaver.saveicon == "heart")
             {
-                conn.CreateTable<RecipeBook>();
-                var recipeBookList = conn.Table<RecipeBook>().ToList();
-                int rowsAdded = conn.Insert(recipe);
+                using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+                {
+                    conn.CreateTable<RecipeBook>();
+                    var recipeBookList = conn.Table<RecipeBook>().ToList();
+                    int rowsAdded = conn.Insert(recipe);
 
-                button.Source = "heartFilled";
+                    button.Source = "heartFilled";
 
+                }
             }
+
+            if(recipeSaver.saveicon == "heartFilled")
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+                {
+                    conn.CreateTable<RecipeBook>();
+                    conn.Delete<RecipeBook>(recipeSaver.recipeBookId);
+                }
+            }
+
         }
+
+
     }
 }
