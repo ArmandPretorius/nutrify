@@ -4,7 +4,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/ArmandPretorius/nutrify">
-    <img src="cclone/cclone.Android/Resources/mipmap-hdpi/icon.png" alt="Logo" height="80" radius="40"/>
+    <img src="nutrify/nutrify.Android/Resources/mipmap-hdpi/icon.png" alt="Logo" height="80" radius="40"/>
   </a>
 
   <h3 align="center">Nutrify</h3>
