@@ -15,7 +15,7 @@
     <a href="https://github.com/ArmandPretorius/nutrify"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ArmandPretorius/nutrify">View Demo</a>
+    <a href="https://youtu.be/OD3Wk6U-JDA">View Demo</a>
     ·
     <a href="https://github.com/ArmandPretorius/nutrify/issues">Report Bug</a>
     ·
