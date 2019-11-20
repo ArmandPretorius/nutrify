@@ -15,8 +15,8 @@ namespace Nutrify.Pages
     public partial class NutrientsResultPage : ContentPage
     {
         HttpClient client;
-        private string foodAppId = "4b8595d9";
-        private string foodAppKey = "d6e12ea7b4748aa39affc712f654bf7a";
+        private string foodAppId = "[APP-ID]";
+        private string foodAppKey = "[APP-SUBCRIPTION-KEY]";
         private string result;
 
         public NutrientsResultPage(string search)

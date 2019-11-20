@@ -19,8 +19,8 @@ namespace Nutrify.Pages
     public partial class RecipesPage : ContentPage
     {
         HttpClient client;
-        private string foodAppId = "00814198";
-        private string foodAppKey = "733f3bd5ce4816806fda09c020a90128";
+        private string foodAppId = "[APP-ID]";
+        private string foodAppKey = "[APP-SUBCRIPTION-KEY]";
 
         public string foodSearch;
 
